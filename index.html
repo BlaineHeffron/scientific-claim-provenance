@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Explore the evidence, assumptions, calibrations, and unresolved frontiers beneath three scientific claims." />
+    <meta name="theme-color" content="#0b1117" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='24' fill='%230b1117' stroke='%235fc9dc' stroke-width='3'/%3E%3Ccircle cx='15' cy='32' r='4' fill='%23efad48'/%3E%3Ccircle cx='49' cy='20' r='4' fill='%235fc9dc'/%3E%3Ccircle cx='45' cy='48' r='4' fill='%23aa79d8'/%3E%3C/svg%3E" />
+    <title>Claim Provenance Atlas</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#explorer">Skip to explorer</a>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Claim Provenance Atlas home">
+        <span class="brand-mark" aria-hidden="true">
+          <i></i><i></i><i></i>
+        </span>
+        <span>Claim Provenance Atlas</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#explorer">Explorer</a>
+        <a href="#shared">Shared dependencies</a>
+        <a href="#method">Method</a>
+      </nav>
+      <span class="version-chip">Research preview · v0.1</span>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">An evidence map, not a verdict engine</p>
+          <h1 id="hero-title">What has to be true<br />for a claim to hold?</h1>
+          <p class="hero-intro">
+            Trace observations, calibrations, statistical steps, model choices,
+            and interpretive bridges—down to the exact place where evidence ends.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#explorer">Explore the claims</a>
+            <a class="button ghost" href="#method">Read the audit rules</a>
+          </div>
+        </div>
+        <div class="hero-diagram" aria-hidden="true">
+          <div class="orbit orbit-a"></div>
+          <div class="orbit orbit-b"></div>
+          <div class="hero-node hero-node-root">Claim</div>
+          <div class="hero-node hero-node-a">Observation</div>
+          <div class="hero-node hero-node-b">Calibration</div>
+          <div class="hero-node hero-node-c">Model</div>
+          <div class="hero-node hero-node-d">Frontier</div>
+          <svg viewBox="0 0 560 390" preserveAspectRatio="none">
+            <path d="M138 94 C220 94 205 190 280 190" />
+            <path d="M126 284 C210 284 202 205 280 195" />
+            <path d="M444 92 C365 92 374 178 295 188" />
+            <path class="dashed" d="M448 294 C365 294 382 211 300 198" />
+          </svg>
+        </div>
+        <dl class="hero-metrics" id="hero-metrics" aria-label="Dataset totals"></dl>
+      </section>
+
+      <section class="claim-picker" aria-labelledby="claim-picker-title">
+        <div class="section-heading compact">
+          <p class="eyebrow">Three bounded audits</p>
+          <h2 id="claim-picker-title">Choose a claim</h2>
+        </div>
+        <div class="claim-tabs" id="claim-tabs" role="tablist" aria-label="Audited claims"></div>
+      </section>
+
+      <section class="explorer" id="explorer" aria-labelledby="explorer-title">
+        <div class="explorer-header">
+          <div>
+            <p class="eyebrow" id="claim-citation"></p>
+            <h2 id="explorer-title">Loading graph…</h2>
+          </div>
+          <a class="source-link" id="source-link" href="#" rel="noreferrer">Publisher record ↗</a>
+        </div>
+
+        <div class="claim-statement">
+          <span>Root claim</span>
+          <p id="root-claim"></p>
+        </div>
+
+        <div class="explorer-layout">
+          <aside class="filter-panel" aria-label="Graph filters">
+            <div class="filter-panel-head">
+              <h3>Filter the graph</h3>
+              <button class="text-button" id="reset-filters" type="button">Reset</button>
+            </div>
+            <label class="search-label" for="node-search">Search propositions</label>
+            <div class="search-wrap">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"></circle><path d="m16 16 4 4"></path></svg>
+              <input id="node-search" type="search" placeholder="e.g. calibration" autocomplete="off" />
+            </div>
+            <fieldset>
+              <legend>Sensitivity</legend>
+              <div id="sensitivity-filters" class="filter-list"></div>
+            </fieldset>
+            <fieldset>
+              <legend>Node type</legend>
+              <select id="type-filter">
+                <option value="all">All node types</option>
+              </select>
+            </fieldset>
+            <div class="filter-summary" aria-live="polite">
+              <strong id="visible-count">0</strong>
+              <span>visible nodes</span>
+            </div>
+            <div class="direction-note">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 12h15M14 7l5 5-5 5"></path></svg>
+              <p><strong>Arrow direction</strong><br />Dependency → dependent claim</p>
+            </div>
+          </aside>
+
+          <div class="graph-shell">
+            <div class="graph-toolbar">
+              <div class="legend" aria-label="Sensitivity legend">
+                <span><i class="dot verdict"></i>Verdict-capable</span>
+                <span><i class="dot precision"></i>Precision</span>
+                <span><i class="dot interpretation"></i>Interpretation</span>
+                <span><i class="dot unknown"></i>Unknown</span>
+              </div>
+              <button id="show-frontiers" class="small-button" type="button">Frontiers only</button>
+            </div>
+            <div class="graph-stage" id="graph-stage" tabindex="0" aria-label="Interactive dependency graph">
+              <svg class="edge-layer" id="edge-layer" aria-hidden="true"></svg>
+              <div class="graph-columns" id="graph-columns"></div>
+              <div class="graph-empty" id="graph-empty" hidden>No nodes match these filters.</div>
+            </div>
+          </div>
+
+          <aside class="inspector" id="inspector" aria-live="polite">
+            <div class="inspector-placeholder" id="inspector-placeholder">
+              <span class="inspect-glyph" aria-hidden="true">↗</span>
+              <h3>Select a node</h3>
+              <p>Inspect its proposition, sensitivity, evidence, and immediate dependencies.</p>
+            </div>
+            <div id="inspector-content" hidden></div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="survival-section" aria-labelledby="survival-title">
+        <div class="section-heading">
+          <p class="eyebrow">Adversarial sensitivity</p>
+          <h2 id="survival-title">What survives when the weak links move?</h2>
+        </div>
+        <div class="survival-card">
+          <span class="survival-mark" aria-hidden="true">≠</span>
+          <p id="survival-text"></p>
+        </div>
+      </section>
+
+      <section class="shared-section" id="shared" aria-labelledby="shared-title">
+        <div class="section-heading">
+          <p class="eyebrow">Correlation audit</p>
+          <h2 id="shared-title">Shared dependencies</h2>
+          <p>Repeated papers, calibrations, or pipelines can look like independent evidence when they are not.</p>
+        </div>
+        <div class="shared-grid" id="shared-grid"></div>
+      </section>
+
+      <section class="method-section" id="method" aria-labelledby="method-title">
+        <div class="section-heading">
+          <p class="eyebrow">How to read this project</p>
+          <h2 id="method-title">Bounded, source-located, disagreement-preserving</h2>
+        </div>
+        <div class="method-grid">
+          <article>
+            <span>01</span>
+            <h3>Separate the layers</h3>
+            <p>Observations, calibrations, reductions, statistics, models, and interpretations become different nodes.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Stop explicitly</h3>
+            <p>Missing raw data, inaccessible sources, and depth limits appear as frontiers—not as invisible confidence.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Review edges, not votes</h3>
+            <p>Each accepted dependency was reverse-reviewed. Agreement between models never substitutes for evidence.</p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>Keep conclusions narrow</h3>
+            <p>A model-specific exclusion does not become a family-wide result; an operational criterion does not become an ontology.</p>
+          </article>
+        </div>
+        <div class="notice">
+          <strong>Current status</strong>
+          <p>This is an AI-assisted methods prototype based on a bounded historical audit. It is not expert consensus, peer review, or a credibility score.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div>
+        <strong>Claim Provenance Atlas</strong>
+        <p>Derived metadata only. Source PDFs are neither hosted nor redistributed.</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/BlaineHeffron/scientific-claim-provenance">Source code</a>
+        <a href="data/export-manifest.json">Export manifest</a>
+        <a href="data/claims.json">Derived JSON</a>
+        <a href="#top">Back to top ↑</a>
+      </div>
+    </footer>
+
+    <noscript>This explorer requires JavaScript to render the dependency graph.</noscript>
+    <script src="app.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use the Claim Provenance Atlas, cite the software and the underlying primary sources."
+title: "Claim Provenance Atlas"
+type: software
+authors:
+  - family-names: Heffron
+    given-names: Blaine
+version: 0.1.0
+date-released: 2026-08-09
+license: MIT
+abstract: >-
+  A read-only explorer for bounded evidence and assumption provenance graphs.

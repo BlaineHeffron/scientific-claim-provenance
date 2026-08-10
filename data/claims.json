@@ -1,0 +1,3380 @@
+{
+  "schemaVersion": 1,
+  "datasetId": "CLAIM_PROVENANCE_ATLAS_PHASE4_V1",
+  "referenceGraphSha256": "79aa24b57ddd260a23ab61427b1957f64f2a3774019e8bf947bb71ededea6612",
+  "edgeDirection": "dependency → dependent claim",
+  "methodNotice": "This is a bounded AI-assisted audit, not expert consensus or a vote among models.",
+  "counts": {
+    "claims": 3,
+    "nodes": 105,
+    "edges": 119,
+    "frontiers": 24,
+    "reverseReviewedEdges": 93
+  },
+  "claims": [
+    {
+      "rootId": "P4-C1-RUBENS-KURLBAUM-MEASUREMENT",
+      "slug": "rubens-kurlbaum",
+      "title": "When does a residual become evidence?",
+      "shortTitle": "Thermal radiation",
+      "citation": "H. Rubens and F. Kurlbaum, Annalen der Physik 309, 649–666 (1901)",
+      "recordUrl": "https://doi.org/10.1002/andp.19013090402",
+      "year": 1901,
+      "accent": "amber",
+      "rootClaim": "The observed and calculated Tabelle III entries, with their calibration and normalization chain, warrant comparison among radiation formulas and support treating the residual structure as an experimental constraint.",
+      "counts": {
+        "nodes": 38,
+        "edges": 41,
+        "frontiers": 8,
+        "verdictCapableFrontiers": 6
+      },
+      "nodes": [
+        {
+          "id": "C1-ROOT",
+          "type": "root_claim",
+          "proposition": "The observed and calculated Tabelle III entries, with their calibration and normalization chain, warrant comparison among radiation formulas and support treating the residual structure as an experimental constraint.",
+          "status": "source_asserted",
+          "evidenceClasses": [
+            "OBS",
+            "CAL",
+            "STAT",
+            "INT"
+          ],
+          "depth": 0,
+          "sensitivity": "verdict_capable",
+          "locators": [
+            {
+              "sourceId": "RUBENS_KURLBAUM1901_ANNALEN",
+              "manifestation": "annalen_wiley",
+              "locator": "printed pp. 665-666 = PDF pp. 17-18",
+              "supportScope": "the printed table and the printed comparative conclusion"
+            }
+          ]
+        },
+        {
+          "id": "C1-N01",
+          "type": "observation",
+          "proposition": "Tabelle III prints nine finite observed entries (E beob.) for quartz reststrahlen against absolute temperature, in the paper's own deflection units, with two rows (0 K and 300 K) carrying no observation.",
+          "status": "verified_primary",
+          "evidenceClasses": [
+            "OBS"
+          ],
+          "depth": 1,
+          "sensitivity": "verdict_capable",
+          "locators": [
+            {
+              "sourceId": "RUBENS_KURLBAUM1901_ANNALEN",
+              "manifestation": "annalen_wiley",
+              "locator": "printed p. 665, Tabelle III = PDF p. 17",
+              "supportScope": "existence and values of the printed observed column"
+            }
+          ]
+        },
+        {
+          "id": "C1-N02",
+          "type": "observation",
+          "proposition": "Tabellen I and II print the corresponding fluorspar (24.0 and 31.6 micron) and rock-salt (51.2 micron) series; the p. 666 formula preference rests on these two long-wave tables jointly with Tabelle III, not on Tabelle III alone.",
+          "status": "verified_primary",
+          "evidenceClasses": [
+            "OBS"
+          ],
+          "depth": 1,
+          "sensitivity": "verdict_capable",
+          "locators": [
+            {
+              "sourceId": "RUBENS_KURLBAUM1901_ANNALEN",
+              "manifestation": "annalen_wiley",
+              "locator": "printed pp. 664-665 = PDF pp. 16-17",
+              "supportScope": "printed tables I and II"
+            }
+          ]
+        },
+        {
+          "id": "C1-N03",
+          "type": "data_reduction",
+          "proposition": "The five calculated columns of Tabelle III are the competing radiation formulas evaluated at a single effective wavelength and rendered on the paper's normalized deflection scale.",
+          "status": "reproduced",
+          "evidenceClasses": [
+            "FORM",
+            "CAL"
+          ],
+          "depth": 1,
+          "sensitivity": "precision_only",
+          "locators": [
+            {
+              "sourceId": "RUBENS_KURLBAUM1901_ANNALEN",
+              "manifestation": "annalen_wiley",
+              "locator": "printed p. 665 = PDF p. 17; construction stated printed p. 663 = PDF p. 15",
+              "supportScope": "printed calculated columns"
+            },
+            {
+              "sourceId": "OPUS-P4-R1",
+              "manifestation": "reproduction",
+              "locator": "Deterministic reproduction archived with the audit",
+              "supportScope": "Planck column reconstructed to a maximum absolute deviation of 1.213 units (0.92 per cent of the 132-unit scale); Wien column to 0.814 units (0.62 per cent)."
+            },
+            {
+              "sourceId": "OPUS-P4-R4",
+              "manifestation": "successor reproduction",
+              "locator": "Deterministic reproduction archived with the audit",
+              "supportScope": "all five columns regenerated; Planck/Thiesen middle ranking swaps and is unresolved"
+            }
+          ]
+        },
+        {
+          "id": "C1-N04",
+          "type": "calibration",
+          "proposition": "Both the observed and the calculated columns are affinely normalized: value 0 at t = +20 C (T = 293 K) and value +132 at t = +1000 C (T = 1273 K). The 1273 K anchor is stated; the 293 K zero is forced by the printed zero row of Tabellen I and II and by the temperature-difference statement.",
+          "status": "reproduced",
+          "evidenceClasses": [
+            "CAL"
+          ],
+          "depth": 1,
+          "sensitivity": "precision_only",
+          "locators": [
+            {
+              "sourceId": "RUBENS_KURLBAUM1901_ANNALEN",
+              "manifestation": "annalen_wiley",
+              "locator": "printed p. 662 = PDF p. 14; printed pp. 664-665 zero rows = PDF pp. 16-17",
+              "supportScope": "the printed anchoring statement and the printed zero rows"
+            },
+            {
+              "sourceId": "OPUS-P4-R1",
+              "manifestation": "reproduction",
+              "locator": "rk1901_table3_recompute/result.txt",
+              "supportScope": "the two-point normalization reproduces both printed formula columns"
+            }
+          ]
+        },
+        {
+          "id": "C1-N05",
+          "type": "auxiliary_assumption",
+          "proposition": "The anchor temperature is a chosen analysis parameter. The authors state that the scale of every curve is fixed at 1000 C \"mit Ruecksicht darauf, dass die Abweichungen zwischen Theorie und Experiment moeglichst klein erscheinen\", and that anchoring at 1500 C instead would make the deviations \"bedeutend groesser\".",
+          "status": "verified_primary",
+          "evidenceClasses": [
+            "CAL",
+            "INT"
+          ],
+          "depth": 1,
+          "sensitivity": "precision_only",
+          "locators": [
+            {
+              "sourceId": "RUBENS_KURLBAUM1901_ANNALEN",
+              "manifestation": "annalen_wiley",
+              "locator": "printed p. 660, footnote 1 = PDF p. 12",
+              "supportScope": "the authors' own statement of the anchor-selection rationale"
+            }
+          ]
+        },
+        {
+          "id": "C1-N06",
+          "type": "statistical_inference",
+          "proposition": "Below the coincidence row the quartz observations lie above the Planck column in four consecutive rows (373, 500, 800, 1100 K); the paper reads this as deviations that \"scheinen systematisch zu sein\" between 0 and 1000 C.",
+          "status": "reproduced",
+          "evidenceClasses": [
+            "STAT"
+          ],
+          "depth": 1,
+          "sensitivity": "verdict_capable",
+          "locators": [
+            {
+              "sourceId": "RUBENS_KURLBAUM1901_ANNALEN",
+              "manifestation": "annalen_wiley",
+              "locator": "printed p. 666 = PDF p. 18",
+              "supportScope": "the printed German claim of apparent systematic deviation"
+            },
+            {
+              "sourceId": "OPUS-P4-R1",
+              "manifestation": "reproduction",
+              "locator": "rk1901_table3_recompute/result.txt",
+              "supportScope": "The one-signed run survives every effective wavelength in the printed band range 8.50-9.05 micron and survives re-anchoring at the highest row."
+            }
+          ]
+        },
+        {
+          "id": "C1-N07",
+          "type": "interpretation",
+          "proposition": "Only formulas linear in T at large lambda T are suitable; among Lummer-Jahnke and Planck, Planck is preferred for greater simplicity, not for better fit. Rayleigh is rejected for short-wave failure and systematic deviation.",
+          "status": "verified_primary",
+          "evidenceClasses": [
+            "INT"
+          ],
+          "depth": 1,
+          "sensitivity": "interpretation_only",
+          "locators": [
+            {
+              "sourceId": "RUBENS_KURLBAUM1901_ANNALEN",
+              "manifestation": "annalen_wiley",
+              "locator": "printed p. 666 = PDF p. 18",
+              "supportScope": "the printed preference sentence and its stated ground"
+            }
+          ]
+        },
+        {
+          "id": "C1-N08",
+          "type": "instrument_response",
+          "proposition": "The measured quantity is a galvanometer deflection from a thermopile fed by the reststrahlen beam; it is treated throughout as proportional to radiant power without any linearity test reported in the article.",
+          "status": "source_asserted",
+          "evidenceClasses": [
+            "OBS",
+            "CAL"
+          ],
+          "depth": 1,
+          "sensitivity": "verdict_capable",
+          "locators": [
+            {
+              "sourceId": "RUBENS_KURLBAUM1901_ANNALEN",
+              "manifestation": "annalen_wiley",
+              "locator": "printed pp. 655-656 = PDF pp. 7-8",
+              "supportScope": "apparatus description; the linearity assumption is not stated as tested"
+            }
+          ]
+        },
+        {
+          "id": "C1-N09",
+          "type": "entity_identification",
+          "proposition": "The six cavity radiators I-VI are identified as Kirchhoff black bodies in the long-wave region. This is an ENTITY label, distinct from the operational fact that they agree with one another.",
+          "status": "source_asserted",
+          "evidenceClasses": [
+            "CAL",
+            "INT"
+          ],
+          "depth": 1,
+          "sensitivity": "verdict_capable",
+          "locators": [
+            {
+              "sourceId": "RUBENS_KURLBAUM1901_ANNALEN",
+              "manifestation": "annalen_wiley",
+              "locator": "printed p. 663 = PDF p. 15",
+              "supportScope": "the printed identification and the argument offered for it"
+            }
+          ]
+        },
+        {
+          "id": "C1-N10",
+          "type": "entity_identification",
+          "proposition": "A reststrahlen band of finite width and multiple maxima is replaced by one or two monochromatic wavelengths: quartz by the single value 8.85 micron, fluorspar by the pair 24.0 and 31.6 micron.",
+          "status": "verified_primary",
+          "evidenceClasses": [
+            "CAL",
+            "FORM"
+          ],
+          "depth": 1,
+          "sensitivity": "precision_only",
+          "locators": [
+            {
+              "sourceId": "RUBENS_KURLBAUM1901_ANNALEN",
+              "manifestation": "annalen_wiley",
+              "locator": "printed pp. 653-654 and 661-662 = PDF pp. 5-6 and 13-14",
+              "supportScope": "the printed homogeneity assumption and the printed centroid substitution"
+            }
+          ]
+        },
+        {
+          "id": "C1-N11",
+          "type": "quantity_definition",
+          "proposition": "The abscissa is the absolute temperature T of the radiating cavity, with Celsius rows converted by T = t + 273.",
+          "status": "verified_primary",
+          "evidenceClasses": [
+            "OBS"
+          ],
+          "depth": 1,
+          "sensitivity": "precision_only",
+          "locators": [
+            {
+              "sourceId": "RUBENS_KURLBAUM1901_ANNALEN",
+              "manifestation": "annalen_wiley",
+              "locator": "printed pp. 664-665 table headers = PDF pp. 16-17",
+              "supportScope": "printed paired Celsius and absolute columns"
+            }
+          ]
+        },
+        {
+          "id": "C1-N12",
+          "type": "data_reduction",
+          "proposition": "A contamination (\"Verunreinigung\") correction is subtracted from the observed deflections before tabulation.",
+          "status": "source_asserted",
+          "evidenceClasses": [
+            "CAL"
+          ],
+          "depth": 1,
+          "sensitivity": "verdict_capable",
+          "locators": [
+            {
+              "sourceId": "RUBENS_KURLBAUM1901_ANNALEN",
+              "manifestation": "annalen_wiley",
+              "locator": "printed pp. 656-657 = PDF pp. 8-9",
+              "supportScope": "the printed statement that the correction was determined and subtracted"
+            }
+          ]
+        },
+        {
+          "id": "C1-N13",
+          "type": "calibration",
+          "proposition": "Galvanometer sensitivity was checkable at any time by a simple device, and changes in sensitivity were \"stets beruecksichtigt\" when computing results. No sensitivity values, cadence, or correction magnitudes are printed.",
+          "status": "source_asserted",
+          "evidenceClasses": [
+            "CAL"
+          ],
+          "depth": 2,
+          "sensitivity": "verdict_capable",
+          "locators": [
+            {
+              "sourceId": "RUBENS_KURLBAUM1901_ANNALEN",
+              "manifestation": "annalen_wiley",
+              "locator": "printed p. 656 = PDF p. 8",
+              "supportScope": "existence of the procedure only"
+            }
+          ]
+        },
+        {
+          "id": "C1-N14",
+          "type": "reference_standard",
+          "proposition": "Temperature of the electrically heated cavities is measured with a Le Chatelier thermocouple on the Holborn-Day (1899) determinations.",
+          "status": "verified_record",
+          "evidenceClasses": [
+            "CAL",
+            "REC"
+          ],
+          "depth": 2,
+          "sensitivity": "verdict_capable",
+          "locators": [
+            {
+              "sourceId": "RUBENS_KURLBAUM1901_ANNALEN",
+              "manifestation": "annalen_wiley",
+              "locator": "printed p. 658 and its footnote 1 = PDF p. 10",
+              "supportScope": "the thermometric route and its bibliographic reference"
+            }
+          ]
+        },
+        {
+          "id": "C1-N15",
+          "type": "reference_standard",
+          "proposition": "Sub-ambient points come from physical fixed states rather than from the thermocouple: liquid air (-188 C), solid carbon dioxide with ether (-80 C), water vapour, and room-temperature water at 20 C flushing the diaphragms.",
+          "status": "source_asserted",
+          "evidenceClasses": [
+            "CAL"
+          ],
+          "depth": 2,
+          "sensitivity": "precision_only",
+          "locators": [
+            {
+              "sourceId": "RUBENS_KURLBAUM1901_ANNALEN",
+              "manifestation": "annalen_wiley",
+              "locator": "printed pp. 655 and 657 = PDF pp. 7 and 9",
+              "supportScope": "the printed filling media of black bodies I, II, III and the 20 C water flush"
+            }
+          ]
+        },
+        {
+          "id": "C1-N16",
+          "type": "calibration",
+          "proposition": "The contamination magnitude is measured with a rock-salt plate that absorbs the reststrahlen completely but transmits 90 per cent of the contamination. The 90 per cent figure is asserted without a locator in this article.",
+          "status": "source_asserted",
+          "evidenceClasses": [
+            "CAL"
+          ],
+          "depth": 2,
+          "sensitivity": "verdict_capable",
+          "locators": [
+            {
+              "sourceId": "RUBENS_KURLBAUM1901_ANNALEN",
+              "manifestation": "annalen_wiley",
+              "locator": "printed p. 657 = PDF p. 9",
+              "supportScope": "the printed method and the printed 90 per cent transmission figure"
+            }
+          ]
+        },
+        {
+          "id": "C1-N17",
+          "type": "auxiliary_assumption",
+          "proposition": "Contamination is modelled as ordinary thermal radiation, hence growing as T^4 by Stefan's law while the reststrahlen grow roughly as T, so that the relative impurity grows as T^3. This is a MODEL of the contamination, used to reason about where correction matters.",
+          "status": "verified_primary",
+          "evidenceClasses": [
+            "CAL",
+            "FORM"
+          ],
+          "depth": 2,
+          "sensitivity": "verdict_capable",
+          "locators": [
+            {
+              "sourceId": "RUBENS_KURLBAUM1901_ANNALEN",
+              "manifestation": "annalen_wiley",
+              "locator": "printed p. 656 = PDF p. 8",
+              "supportScope": "the printed scaling argument"
+            }
+          ]
+        },
+        {
+          "id": "C1-N18",
+          "type": "observation",
+          "proposition": "Printed contamination magnitudes: 2.5 per cent of the measured quantity at 1472 C for fluorspar and quartz with four surfaces; 10 per cent at 600 C for rock salt with five surfaces, reduced to about one twentieth with six, and rising again to nearly 8 per cent at 1474 C.",
+          "status": "verified_primary",
+          "evidenceClasses": [
+            "OBS",
+            "CAL"
+          ],
+          "depth": 2,
+          "sensitivity": "verdict_capable",
+          "locators": [
+            {
+              "sourceId": "RUBENS_KURLBAUM1901_ANNALEN",
+              "manifestation": "annalen_wiley",
+              "locator": "printed pp. 656-657 and p. 656 footnote 3 = PDF pp. 8-9",
+              "supportScope": "the printed contamination percentages"
+            }
+          ]
+        },
+        {
+          "id": "C1-N19",
+          "type": "reference_standard",
+          "proposition": "Reststrahlen wavelengths are taken from earlier Rubens work, not measured here: quartz maxima and a further narrow band at 21.5 micron from Rubens and Nichols; the fluorspar metallic-reflection region from Rubens 1899.",
+          "status": "verified_record",
+          "evidenceClasses": [
+            "REC",
+            "CAL"
+          ],
+          "depth": 2,
+          "sensitivity": "precision_only",
+          "locators": [
+            {
+              "sourceId": "RUBENS_KURLBAUM1901_ANNALEN",
+              "manifestation": "annalen_wiley",
+              "locator": "printed pp. 653 and 662 with their footnotes = PDF pp. 5 and 14",
+              "supportScope": "the wavelength attributions and their bibliographic sources"
+            }
+          ]
+        },
+        {
+          "id": "C1-N20",
+          "type": "auxiliary_assumption",
+          "proposition": "The quartz effective wavelength 8.85 micron is described as the centroid (\"Schwerpunkt\") of the band. It is not the arithmetic mean of the printed maxima, and the intensity weighting that would yield it is not published. The article prints the quartz maxima twice with different second values, 8.50 and 9.05 micron on one page and 8.50 and 9.02 micron on the next.",
+          "status": "unresolved",
+          "evidenceClasses": [
+            "CAL"
+          ],
+          "depth": 2,
+          "sensitivity": "precision_only",
+          "locators": [
+            {
+              "sourceId": "RUBENS_KURLBAUM1901_ANNALEN",
+              "manifestation": "annalen_wiley",
+              "locator": "printed p. 662 = PDF p. 14, both statements",
+              "supportScope": "The discrepant pair is read from the Wiley text layer and is flagged for page-image confirmation; it is not promoted to a printing-error claim."
+            }
+          ]
+        },
+        {
+          "id": "C1-N21",
+          "type": "calibration",
+          "proposition": "For fluorspar the two-band treatment uses a printed reflectivity ratio: each fluorite surface reflects about 1.2 times as strongly at 31.6 micron as at 24.0 micron, so after four reflections the second band's relative strength is raised by about a factor 2.",
+          "status": "verified_primary",
+          "evidenceClasses": [
+            "CAL"
+          ],
+          "depth": 3,
+          "sensitivity": "precision_only",
+          "locators": [
+            {
+              "sourceId": "RUBENS_KURLBAUM1901_ANNALEN",
+              "manifestation": "annalen_wiley",
+              "locator": "printed pp. 653-654 = PDF pp. 5-6",
+              "supportScope": "the printed per-surface ratio and the printed compounded factor"
+            }
+          ]
+        },
+        {
+          "id": "C1-N22",
+          "type": "data_reduction",
+          "proposition": "Two inter-series transfer factors are applied: a sylvine-plate fluorspar series is brought onto the common scale by multiplying all ordinates by 2.80, and black body IV deflections are multiplied by 7.5, that factor being fixed by forcing equality of deflections with black body V near 1000 C.",
+          "status": "verified_primary",
+          "evidenceClasses": [
+            "CAL"
+          ],
+          "depth": 2,
+          "sensitivity": "precision_only",
+          "locators": [
+            {
+              "sourceId": "RUBENS_KURLBAUM1901_ANNALEN",
+              "manifestation": "annalen_wiley",
+              "locator": "printed pp. 658 and 660 = PDF pp. 10 and 12",
+              "supportScope": "the printed transfer factors and how the 7.5 factor was fixed"
+            }
+          ]
+        },
+        {
+          "id": "C1-N23",
+          "type": "sample_or_source_characterization",
+          "proposition": "Six cavity radiators are used, with stated materials, apertures and heating routes, several of them previously used at the Physikalisch-Technische Reichsanstalt; the electrically heated body IV has a 12 mm aperture and bodies V and VI 30 mm apertures.",
+          "status": "verified_primary",
+          "evidenceClasses": [
+            "OBS"
+          ],
+          "depth": 2,
+          "sensitivity": "precision_only",
+          "locators": [
+            {
+              "sourceId": "RUBENS_KURLBAUM1901_ANNALEN",
+              "manifestation": "annalen_wiley",
+              "locator": "printed pp. 657-658 = PDF pp. 9-10",
+              "supportScope": "printed apparatus inventory"
+            }
+          ]
+        },
+        {
+          "id": "C1-N24",
+          "type": "auxiliary_assumption",
+          "proposition": "Black-body adequacy is argued from consistency, not from an emissivity measurement: agreement with Beckmann's series taken with a single cavity, and mutual agreement of bodies IV, V and VI in their overlap ranges, are said to prove (\"Es wird hierdurch bewiesen\") that the cavities approximate Kirchhoff's black body equally well at these long wavelengths.",
+          "status": "verified_primary",
+          "evidenceClasses": [
+            "CAL",
+            "INT"
+          ],
+          "depth": 2,
+          "sensitivity": "verdict_capable",
+          "locators": [
+            {
+              "sourceId": "RUBENS_KURLBAUM1901_ANNALEN",
+              "manifestation": "annalen_wiley",
+              "locator": "printed p. 663 = PDF p. 15",
+              "supportScope": "the printed consistency argument and its printed status word"
+            }
+          ]
+        },
+        {
+          "id": "C1-N25",
+          "type": "auxiliary_assumption",
+          "proposition": "The measured signal is a difference quantity: between 0 and 1500 C the reststrahlen grow, within the error limits, proportionally to the temperature DIFFERENCE between the radiating and the irradiated body, and the irradiated reference is the 20 C water-flushed diaphragm and screen.",
+          "status": "verified_primary",
+          "evidenceClasses": [
+            "OBS",
+            "CAL"
+          ],
+          "depth": 2,
+          "sensitivity": "precision_only",
+          "locators": [
+            {
+              "sourceId": "RUBENS_KURLBAUM1901_ANNALEN",
+              "manifestation": "annalen_wiley",
+              "locator": "printed pp. 655 and 662 = PDF pp. 7 and 14",
+              "supportScope": "the printed water-flush temperature and the printed difference proportionality"
+            }
+          ]
+        },
+        {
+          "id": "C1-N26",
+          "type": "theoretical_model",
+          "proposition": "Planck's equation (5) with the constant convention c = 4.965 (lambda_m T) and lambda_m T = 2890, as fixed in the paper's own constants footnote.",
+          "status": "reproduced",
+          "evidenceClasses": [
+            "FORM"
+          ],
+          "depth": 2,
+          "sensitivity": "precision_only",
+          "locators": [
+            {
+              "sourceId": "RUBENS_KURLBAUM1901_ANNALEN",
+              "manifestation": "annalen_wiley",
+              "locator": "printed p. 652 and its footnote 3 = PDF p. 4",
+              "supportScope": "printed formula and printed constant convention"
+            },
+            {
+              "sourceId": "OPUS-P4-R1",
+              "manifestation": "reproduction",
+              "locator": "rk1901_table3_recompute/result.txt",
+              "supportScope": "c = 14348.85 reproduces the printed Planck column to 0.92 per cent of scale"
+            }
+          ]
+        },
+        {
+          "id": "C1-N27",
+          "type": "theoretical_model",
+          "proposition": "The competitor set is fixed by the paper: Wien (1), Thiesen (2), Rayleigh (3), Lummer-Jahnke (4a) with mu = 4 and nu = 1.3, and Planck (5). The Lummer-Jahnke curve is deliberately omitted from the figures and appears only in the tables.",
+          "status": "verified_primary",
+          "evidenceClasses": [
+            "FORM"
+          ],
+          "depth": 2,
+          "sensitivity": "interpretation_only",
+          "locators": [
+            {
+              "sourceId": "RUBENS_KURLBAUM1901_ANNALEN",
+              "manifestation": "annalen_wiley",
+              "locator": "printed pp. 650-652 and 663 = PDF pp. 2-4 and 15",
+              "supportScope": "printed formula inventory and the printed omission statement"
+            }
+          ]
+        },
+        {
+          "id": "C1-N28",
+          "type": "publication_record",
+          "proposition": "SHARED DEPENDENCY. The 1901 Annalen paper states in its opening bracket that part of the observation material communicated here was already published in the Berlin Academy reports, and its own footnote names Sitzungsber. Berlin 41, 929-941 (1900). RUBENS_KURLBAUM1900 and RUBENS_KURLBAUM1901_ANNALEN therefore do not constitute two independent experimental confirmations.",
+          "status": "verified_primary",
+          "evidenceClasses": [
+            "REC"
+          ],
+          "depth": 1,
+          "sensitivity": "verdict_capable",
+          "locators": [
+            {
+              "sourceId": "RUBENS_KURLBAUM1901_ANNALEN",
+              "manifestation": "annalen_wiley",
+              "locator": "printed p. 649 head-note and footnote 1 = PDF p. 1",
+              "supportScope": "the printed statement of partial prior publication"
+            }
+          ]
+        },
+        {
+          "id": "C1-N29",
+          "type": "auxiliary_assumption",
+          "proposition": "Atmospheric path absorption is uncontrolled and is demonstrated by the paper itself to be capable of biasing deflections: the marble series was withheld from publication because its reststrahlen coincide with a water vapour absorption band, which was noticeable as a decrease in the galvanometer deflections. No purge, path length or humidity record is given.",
+          "status": "verified_primary",
+          "evidenceClasses": [
+            "OBS",
+            "CAL"
+          ],
+          "depth": 2,
+          "sensitivity": "unknown",
+          "locators": [
+            {
+              "sourceId": "RUBENS_KURLBAUM1901_ANNALEN",
+              "manifestation": "annalen_wiley",
+              "locator": "printed p. 655 = PDF p. 7",
+              "supportScope": "the printed marble withdrawal and its stated cause"
+            }
+          ]
+        },
+        {
+          "id": "C1-F01",
+          "type": "unresolved_frontier",
+          "proposition": "The raw galvanometer readings, observation logs and dates behind the observed column are not published in the article and no archival locator is established within this pilot.",
+          "status": "inaccessible",
+          "evidenceClasses": [
+            "OBS"
+          ],
+          "depth": 2,
+          "sensitivity": "verdict_capable",
+          "locators": []
+        },
+        {
+          "id": "C1-F02",
+          "type": "unresolved_frontier",
+          "proposition": "The galvanometer sensitivity-correction values, their cadence, and the arithmetic by which they entered the results are not published.",
+          "status": "inaccessible",
+          "evidenceClasses": [
+            "CAL"
+          ],
+          "depth": 3,
+          "sensitivity": "verdict_capable",
+          "locators": []
+        },
+        {
+          "id": "C1-F03",
+          "type": "unresolved_frontier",
+          "proposition": "Per-row contamination corrections for Tabelle III are not published; only spot percentages at extreme temperatures are printed.",
+          "status": "inaccessible",
+          "evidenceClasses": [
+            "CAL"
+          ],
+          "depth": 3,
+          "sensitivity": "verdict_capable",
+          "locators": []
+        },
+        {
+          "id": "C1-F04",
+          "type": "unresolved_frontier",
+          "proposition": "No total error budget for the observed column is stated anywhere in the article. The reproduction shows that a uniform multiplicative perturbation of only 1.37 per cent of the observed column destroys the four-row one-signed Planck residual run, which is smaller than the printed 2.5 per cent contamination correction at the top of the range.",
+          "status": "unresolved",
+          "evidenceClasses": [
+            "STAT",
+            "CAL"
+          ],
+          "depth": 2,
+          "sensitivity": "verdict_capable",
+          "locators": [
+            {
+              "sourceId": "OPUS-P4-R1",
+              "manifestation": "reproduction",
+              "locator": "rk1901_table3_recompute/result.txt",
+              "supportScope": "the 1.37 per cent fragility figure and the printed 2.5 per cent comparator"
+            }
+          ]
+        },
+        {
+          "id": "C1-F05",
+          "type": "unresolved_frontier",
+          "proposition": "No absolute emissivity or aperture-loss characterization of cavities I-VI exists in the held sources; the deeper provenance of the black-body identification is placed on the frontier.",
+          "status": "unresolved",
+          "evidenceClasses": [
+            "CAL"
+          ],
+          "depth": 3,
+          "sensitivity": "verdict_capable",
+          "locators": []
+        },
+        {
+          "id": "C1-F06",
+          "type": "unresolved_frontier",
+          "proposition": "Holborn and Day, Wied. Ann. 68, 817 (1899) is not held; the realization of the thermometric scale below and above the thermocouple range is a depth boundary for this pilot.",
+          "status": "inaccessible",
+          "evidenceClasses": [
+            "CAL",
+            "REC"
+          ],
+          "depth": 3,
+          "sensitivity": "verdict_capable",
+          "locators": []
+        },
+        {
+          "id": "C1-F07",
+          "type": "unresolved_frontier",
+          "proposition": "The German semantic linkage on printed p. 666 remains behind the inherited translation gate of RUBENS_KURLBAUM1901_ANNALEN__final__v1; no positive semantic finding is promoted from model translation.",
+          "status": "unresolved",
+          "evidenceClasses": [
+            "INT"
+          ],
+          "depth": 1,
+          "sensitivity": "interpretation_only",
+          "locators": [
+            {
+              "sourceId": "RUBENS_KURLBAUM1901_ANNALEN",
+              "manifestation": "annalen_wiley",
+              "locator": "printed p. 666 = PDF p. 18",
+              "supportScope": "inherited gate, carried unchanged"
+            }
+          ]
+        },
+        {
+          "id": "C1-F08",
+          "type": "unresolved_frontier",
+          "proposition": "The band shape of the quartz reststrahlen, and therefore the weighting that produces the 8.85 micron centroid, requires Rubens and Nichols (1897), which is not held.",
+          "status": "inaccessible",
+          "evidenceClasses": [
+            "CAL",
+            "REC"
+          ],
+          "depth": 3,
+          "sensitivity": "precision_only",
+          "locators": []
+        }
+      ],
+      "edges": [
+        {
+          "id": "C1-E01",
+          "source": "C1-N01",
+          "target": "C1-ROOT",
+          "type": "measured_by",
+          "statement": "The root claim's observational content is exactly the printed observed column of Tabelle III; without it there is nothing to compare.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C1-E02",
+          "source": "C1-N02",
+          "target": "C1-ROOT",
+          "type": "conditioned_on",
+          "statement": "The printed formula preference is drawn from tables I-III jointly; the quartz table alone is the weakest discriminator by the authors' own statement on p. 666.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C1-E03",
+          "source": "C1-N03",
+          "target": "C1-ROOT",
+          "type": "compared_to",
+          "statement": "The comparison among radiation formulas is a comparison against the calculated columns, so the root claim depends on how those columns were constructed.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C1-E04",
+          "source": "C1-N06",
+          "target": "C1-ROOT",
+          "type": "inferred_from",
+          "statement": "Treating the residual structure as an experimental constraint depends on the residual pattern being a stable feature rather than an artefact of construction.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C1-E05",
+          "source": "C1-N07",
+          "target": "C1-ROOT",
+          "type": "classified_as",
+          "statement": "The root claim inherits the paper's own interpretive selection, in which Planck is chosen over Lummer-Jahnke on simplicity rather than on fit.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C1-E06",
+          "source": "C1-N28",
+          "target": "C1-ROOT",
+          "type": "shares_dependency_with",
+          "statement": "The observation set underlying this root is partly the same observation set published in 1900, so the two Rubens-Kurlbaum sources cannot be counted as independent corroboration of the same constraint.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C1-E07",
+          "source": "C1-N08",
+          "target": "C1-N01",
+          "type": "measured_by",
+          "statement": "Each observed entry is a thermopile-galvanometer deflection; the observed column is a deflection record, not a radiance.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C1-E08",
+          "source": "C1-N12",
+          "target": "C1-N01",
+          "type": "corrected_by",
+          "statement": "The printed observed values are post-correction values, the contamination having been measured and subtracted.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C1-E09",
+          "source": "C1-N11",
+          "target": "C1-N01",
+          "type": "conditioned_on",
+          "statement": "Every observed entry is indexed by an absolute temperature obtained from the thermometric chain.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C1-E10",
+          "source": "C1-N09",
+          "target": "C1-N01",
+          "type": "assumes",
+          "statement": "Reading the deflections as black-body radiation requires the cavity radiators to be black bodies at these wavelengths.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C1-E11",
+          "source": "C1-N22",
+          "target": "C1-N01",
+          "type": "normalized_by",
+          "statement": "Series taken with different cavities and with the sylvine plate enter the single printed column only after multiplication by transfer factors of 7.5 and 2.80.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C1-E12",
+          "source": "C1-N29",
+          "target": "C1-N01",
+          "type": "assumes",
+          "statement": "The observed column assumes the atmospheric path is not selectively absorbing at 8.85 micron, an assumption the paper shows to fail for marble and never tests for quartz.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C1-E13",
+          "source": "C1-N13",
+          "target": "C1-N08",
+          "type": "calibrated_by",
+          "statement": "Deflection values are only comparable across days because a sensitivity correction was applied; the correction itself is unpublished.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C1-E14",
+          "source": "C1-N25",
+          "target": "C1-N08",
+          "type": "assumes",
+          "statement": "The thermopile reads a difference against the 20 C surroundings, which fixes both the physical zero and the tabulated zero.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C1-E15",
+          "source": "C1-N14",
+          "target": "C1-N11",
+          "type": "calibrated_by",
+          "statement": "Electrically heated cavity temperatures come from a Le Chatelier thermocouple on the Holborn-Day scale.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C1-E16",
+          "source": "C1-N15",
+          "target": "C1-N11",
+          "type": "calibrated_by",
+          "statement": "Sub-ambient points are physical fixed states, not thermocouple readings, so the low-temperature rows depend on a different standard from the high-temperature rows.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C1-E17",
+          "source": "C1-N16",
+          "target": "C1-N12",
+          "type": "measured_by",
+          "statement": "The contamination magnitude is obtained through a rock-salt plate whose selective transmission of 90 per cent is asserted, not measured here.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C1-E18",
+          "source": "C1-N17",
+          "target": "C1-N12",
+          "type": "modeled_by",
+          "statement": "Where and how strongly the correction is applied follows the T^4 against T scaling model of the contamination.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C1-E19",
+          "source": "C1-N18",
+          "target": "C1-N12",
+          "type": "instantiated_by",
+          "statement": "The printed percentages are the only quantitative instances of the correction available.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C1-E20",
+          "source": "C1-N10",
+          "target": "C1-N03",
+          "type": "assumes",
+          "statement": "Every calculated column is evaluated at a substituted monochromatic wavelength rather than over the measured band.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C1-E21",
+          "source": "C1-N26",
+          "target": "C1-N03",
+          "type": "modeled_by",
+          "statement": "The Planck column is that formula with the paper's own constant convention; the reproduction confirms the convention.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C1-E22",
+          "source": "C1-N27",
+          "target": "C1-N03",
+          "type": "modeled_by",
+          "statement": "The remaining columns are the competitor formulas with their own printed constant conventions.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C1-E23",
+          "source": "C1-N04",
+          "target": "C1-N03",
+          "type": "normalized_by",
+          "statement": "The calculated columns are placed on the deflection scale by the two-point affine normalization, which is what makes them comparable to the observed column at all.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C1-E24",
+          "source": "C1-N20",
+          "target": "C1-N10",
+          "type": "derived_from",
+          "statement": "The quartz single wavelength is a centroid of the printed band whose weighting is not published.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C1-E25",
+          "source": "C1-N19",
+          "target": "C1-N10",
+          "type": "cites",
+          "statement": "The band positions themselves are imported from earlier Rubens measurements and are not remeasured here; this is a genuine logical dependency, not mere citation, because the calculated columns cannot be evaluated without them.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C1-E26",
+          "source": "C1-N21",
+          "target": "C1-N10",
+          "type": "calibrated_by",
+          "statement": "The relative weight of the fluorspar second band is fixed by the printed per-surface reflectivity ratio compounded over four reflections.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C1-E27",
+          "source": "C1-N05",
+          "target": "C1-N04",
+          "type": "assumes",
+          "statement": "The normalization anchor is not forced by the physics; the authors state they chose it so that theory-experiment deviations appear as small as possible.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C1-E28",
+          "source": "C1-N25",
+          "target": "C1-N04",
+          "type": "derived_from",
+          "statement": "The zero of the affine normalization is the 20 C surroundings temperature, which is why every formula column prints zero at 293 K.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C1-E29",
+          "source": "C1-N01",
+          "target": "C1-N06",
+          "type": "derived_from",
+          "statement": "The residual pattern is the observed column minus the calculated column, so it inherits every defect of the observed column.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C1-E30",
+          "source": "C1-N03",
+          "target": "C1-N06",
+          "type": "derived_from",
+          "statement": "The residual pattern equally inherits every defect of the calculated column construction.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C1-E31",
+          "source": "C1-N04",
+          "target": "C1-N06",
+          "type": "normalized_by",
+          "statement": "The residual is identically zero at the anchor row by construction, so only the pattern away from the anchor carries evidence.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C1-E32",
+          "source": "C1-N24",
+          "target": "C1-N09",
+          "type": "inferred_from",
+          "statement": "The black-body identification rests on mutual and external consistency of deflections, which is weaker than an emissivity determination.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C1-E33",
+          "source": "C1-N23",
+          "target": "C1-N09",
+          "type": "instantiated_by",
+          "statement": "The entity label is applied to six specific physical cavities with different materials, apertures and heating routes.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C1-E34",
+          "source": "C1-F01",
+          "target": "C1-N01",
+          "type": "documented_by",
+          "statement": "The observed column has no accessible primary record behind it; the branch stops here as an explicit archival gap.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C1-E35",
+          "source": "C1-F02",
+          "target": "C1-N13",
+          "type": "documented_by",
+          "statement": "The sensitivity correction procedure exists in the text but its content is inaccessible; the branch stops.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C1-E36",
+          "source": "C1-F03",
+          "target": "C1-N12",
+          "type": "documented_by",
+          "statement": "The per-row correction values are inaccessible; the branch stops.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C1-E37",
+          "source": "C1-F04",
+          "target": "C1-N06",
+          "type": "conditioned_on",
+          "statement": "Whether the residual run is evidence at all depends on an error budget that is nowhere stated and that the reproduction shows to be of the same order as the effect.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C1-E38",
+          "source": "C1-F05",
+          "target": "C1-N09",
+          "type": "documented_by",
+          "statement": "No absolute characterization of the cavities is available; the black-body branch stops.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C1-E39",
+          "source": "C1-F06",
+          "target": "C1-N14",
+          "type": "documented_by",
+          "statement": "The thermometric scale realization is not held; the branch stops at the depth boundary.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C1-E40",
+          "source": "C1-F07",
+          "target": "C1-N07",
+          "type": "documented_by",
+          "statement": "The interpretive sentence cannot receive a positive semantic reading without a translation of record; the branch stops at the inherited gate.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C1-E41",
+          "source": "C1-F08",
+          "target": "C1-N20",
+          "type": "documented_by",
+          "statement": "The band shape needed to justify the centroid is not held; the branch stops.",
+          "reviewStatus": "passed"
+        }
+      ],
+      "frontierSummary": {
+        "count": 8,
+        "verdict_capable_frontiers": [
+          "C1-F01",
+          "C1-F02",
+          "C1-F03",
+          "C1-F04",
+          "C1-F05",
+          "C1-F06"
+        ],
+        "precision_only_frontiers": [
+          "C1-F08"
+        ],
+        "interpretation_only_frontiers": [
+          "C1-F07"
+        ],
+        "acquisition_gaps": [
+          "Holborn and Day, Wied. Ann. 68, 817 (1899)",
+          "Rubens and Nichols, Wied. Ann. 60, 418 (1897)",
+          "Rubens, Zeitschr. f. Instrumentenk. 18, 65 (1898); du Bois and Rubens, Ann. d. Phys. 2, 84 (1900)",
+          "Any surviving Physikalisch-Technische Reichsanstalt observation logbook"
+        ]
+      },
+      "sensitivitySummary": {
+        "verdict_capable": [
+          {
+            "node_id": "C1-F04",
+            "mechanism": "The four-row one-signed Planck residual run is destroyed by a uniform 1.37 per cent multiplicative shift of the observed column. The paper's own printed contamination correction reaches 2.5 per cent. The residual structure is therefore inside, not outside, the article's unstated systematic budget."
+          },
+          {
+            "node_id": "C1-N12",
+            "mechanism": "A misestimated contamination correction moves the observed column directly and by more than the residual."
+          },
+          {
+            "node_id": "C1-N13",
+            "mechanism": "Undocumented galvanometer sensitivity drift moves different rows by different amounts across days, which is exactly the shape of an apparent systematic residual."
+          },
+          {
+            "node_id": "C1-N09",
+            "mechanism": "If the cavities depart from black-body behaviour differently at different temperatures, the temperature dependence of the observed column is biased and the formula comparison is biased with it."
+          },
+          {
+            "node_id": "C1-N28",
+            "mechanism": "Counting the 1900 and 1901 papers as two experiments would double-count one observation set; the mechanism is literal data reuse stated by the authors."
+          },
+          {
+            "node_id": "C1-N08",
+            "mechanism": "Any nonlinearity of the thermopile-galvanometer chain in deflection distorts the shape of the measured temperature dependence, which is the entire evidential content."
+          }
+        ],
+        "precision_only": [
+          {
+            "node_id": "C1-N03",
+            "mechanism": "All five calculated columns regenerate within 1.45 per cent of scale. Lummer-Jahnke remains first and Rayleigh/Wien remain last, but the printed Planck-versus-Thiesen separation is smaller than regeneration error and the pair swaps; that middle ordering is unresolved."
+          },
+          {
+            "node_id": "C1-N10",
+            "mechanism": "Sweeping the effective wavelength across the full printed band range 8.50-9.05 micron leaves the one-signed run intact and leaves Lummer-Jahnke closer than Planck."
+          },
+          {
+            "node_id": "C1-N05",
+            "mechanism": "Re-anchoring the printed columns at the highest row leaves the Planck residual run intact, in fact lengthening it, and leaves the ordering Lummer-Jahnke 5.37 below Planck 8.81 below Wien 88.17."
+          },
+          {
+            "node_id": "C1-N04",
+            "mechanism": "The affine normalization is reproduced and forces a zero residual only at the anchor row."
+          },
+          {
+            "node_id": "C1-N22",
+            "mechanism": "Transfer factors shift whole series uniformly and were fixed by an overlap condition."
+          }
+        ],
+        "interpretation_only": [
+          {
+            "node_id": "C1-N07",
+            "mechanism": "The Planck-over-Lummer-Jahnke selection is stated to rest on simplicity; it is an interpretive act, and by the paper's arithmetic Lummer-Jahnke fits the quartz table better."
+          },
+          {
+            "node_id": "C1-N27",
+            "mechanism": "The comparison class is whatever the authors chose to tabulate; the omission of the Lummer-Jahnke curve from the figures is an editorial choice with interpretive effect."
+          },
+          {
+            "node_id": "C1-F07",
+            "mechanism": "The German semantic reading affects how strongly the residual is described, not the arithmetic."
+          }
+        ],
+        "unknown": [
+          {
+            "node_id": "C1-N29",
+            "mechanism": "Atmospheric selective absorption at 8.85 micron is neither measured nor excluded; the paper demonstrates the mechanism is real for another material. Direction and magnitude for quartz are undetermined."
+          }
+        ]
+      },
+      "survival": "Remove or vary every unresolved verdict-capable frontier. The printed Tabelle III entries exist; all five calculated columns regenerate within 1.45 per cent of scale; Lummer-Jahnke remains closer than Planck and Rayleigh/Wien remain last under the tested variations. The Planck-versus-Thiesen middle ordering does not survive: their printed separation is inside regeneration error and they swap. The broad conclusion that formulas linear in T at large lambda T are required survives because fluorspar and rock-salt, not the quartz residual, drive it. The quartz residual-as-experimental-constraint reading does not survive: a 1.37 per cent observed-column shift destroys the run inside an unstated systematic budget. Comparison survives; calibrated residual constraint remains unestablished."
+    },
+    {
+      "rootId": "P4-C2-GRANGIER-SINGLE-PHOTON",
+      "slug": "grangier-anticorrelation",
+      "title": "From anticorrelation to ‘single photon’",
+      "shortTitle": "Photon anticorrelation",
+      "citation": "P. Grangier, G. Roger, and A. Aspect, Europhysics Letters 1, 173–179 (1986)",
+      "recordUrl": "https://doi.org/10.1209/0295-5075/1/4/004",
+      "year": 1986,
+      "accent": "cyan",
+      "rootClaim": "The reported triggered anticorrelation warrants describing the prepared light as a single-photon or nonclassical source.",
+      "counts": {
+        "nodes": 33,
+        "edges": 38,
+        "frontiers": 8,
+        "verdictCapableFrontiers": 4
+      },
+      "nodes": [
+        {
+          "id": "C2-ROOT",
+          "type": "root_claim",
+          "proposition": "The reported triggered anticorrelation warrants describing the prepared light as a single-photon or nonclassical source.",
+          "status": "source_asserted",
+          "evidenceClasses": [
+            "OBS",
+            "STAT",
+            "FORM",
+            "INT"
+          ],
+          "depth": 0,
+          "sensitivity": "verdict_capable",
+          "locators": [
+            {
+              "sourceId": "GRANGIER1986",
+              "manifestation": "iop_epl",
+              "locator": "printed pp. 175-177 = PDF pp. 4-6",
+              "supportScope": "the printed criterion, the printed violation, and the printed entity language"
+            }
+          ]
+        },
+        {
+          "id": "C2-N01",
+          "type": "observation",
+          "proposition": "Printed operating-point rates: N1 about 8800 per second including a dark rate of 300 per second; N_2 equal to 5 per second with a dark rate of 0.02 per second; total counting time 5 hours; 9 observed coincidences; alpha equal to 0.18 plus or minus 0.06; a stated violation of more than 13 standard deviations.",
+          "status": "verified_primary",
+          "evidenceClasses": [
+            "OBS"
+          ],
+          "depth": 1,
+          "sensitivity": "verdict_capable",
+          "locators": [
+            {
+              "sourceId": "GRANGIER1986",
+              "manifestation": "iop_epl",
+              "locator": "printed p. 177, first paragraph = PDF p. 6",
+              "supportScope": "the printed rate sentence, image-confirmed in the inherited Batch review"
+            }
+          ]
+        },
+        {
+          "id": "C2-N02",
+          "type": "statistical_inference",
+          "proposition": "The classical coincidence bound and the anticorrelation parameter are rebuilt from the printed rates alone: N1 T p_r p_t equals 51.1 expected classical coincidences, against the printed \"greater than or equal to 50\", and 9 divided by 51.1 gives alpha equal to 0.176 against the printed 0.18.",
+          "status": "reproduced",
+          "evidenceClasses": [
+            "STAT"
+          ],
+          "depth": 1,
+          "sensitivity": "verdict_capable",
+          "locators": [
+            {
+              "sourceId": "OPUS-P4-R2",
+              "manifestation": "reproduction",
+              "locator": "grangier1986_alpha_from_rates/result.txt",
+              "supportScope": "Full reconstruction from the four printed rate quantities. This goes one step beyond the inherited pilot check, which verified only that 9/50 equals the printed 0.18 and recorded raw reconstruction as not attempted."
+            }
+          ]
+        },
+        {
+          "id": "C2-N03",
+          "type": "theoretical_model",
+          "proposition": "The semiclassical photodetection model, in which a classical field of gate-averaged intensity drives Poisson photodetection, yields via the Cauchy-Schwarz inequality the bound alpha greater than or equal to 1, equivalently p_c not less than p_r p_t.",
+          "status": "verified_primary",
+          "evidenceClasses": [
+            "FORM"
+          ],
+          "depth": 1,
+          "sensitivity": "verdict_capable",
+          "locators": [
+            {
+              "sourceId": "GRANGIER1986",
+              "manifestation": "iop_epl",
+              "locator": "printed p. 175 = PDF p. 4",
+              "supportScope": "the printed derivation and the printed criterion sentence"
+            }
+          ]
+        },
+        {
+          "id": "C2-N04",
+          "type": "interpretation",
+          "proposition": "OPERATIONAL RESULT. The measured alpha violates the semiclassical bound; the paper concludes the light emitted after each triggering pulse exhibits a specifically quantum anticorrelation behaviour.",
+          "status": "verified_primary",
+          "evidenceClasses": [
+            "STAT",
+            "INT"
+          ],
+          "depth": 1,
+          "sensitivity": "verdict_capable",
+          "locators": [
+            {
+              "sourceId": "GRANGIER1986",
+              "manifestation": "iop_epl",
+              "locator": "printed p. 177 = PDF p. 6",
+              "supportScope": "the printed conclusion sentence"
+            }
+          ]
+        },
+        {
+          "id": "C2-N05",
+          "type": "entity_identification",
+          "proposition": "ENTITY LABEL, HELD SEPARATE FROM C2-N04. Calling the prepared light a single-photon source. The article's own strongest formulation is weaker: \"we have demonstrated a situation with some properties of a single-photon state\", and it specifies that an ideal source would require collection at 4 pi solid angle and a shutter triggered by the first photon.",
+          "status": "source_asserted",
+          "evidenceClasses": [
+            "INT"
+          ],
+          "depth": 1,
+          "sensitivity": "interpretation_only",
+          "locators": [
+            {
+              "sourceId": "GRANGIER1986",
+              "manifestation": "iop_epl",
+              "locator": "printed p. 179 = PDF p. 8",
+              "supportScope": "the printed self-characterization and the printed ideal-source counterfactual"
+            }
+          ]
+        },
+        {
+          "id": "C2-N06",
+          "type": "auxiliary_assumption",
+          "proposition": "COMPARISON CLASS. What the bound excludes is the class of classical FIELD descriptions with a non-negative gate-averaged intensity together with Poisson photodetection. A classical particle picture predicts anticorrelation and is untouched by the argument.",
+          "status": "verified_primary",
+          "evidenceClasses": [
+            "FORM",
+            "INT"
+          ],
+          "depth": 1,
+          "sensitivity": "interpretation_only",
+          "locators": [
+            {
+              "sourceId": "GRANGIER1986",
+              "manifestation": "iop_epl",
+              "locator": "printed p. 175 = PDF p. 4; abstract printed p. 173 = PDF p. 2",
+              "supportScope": "the printed scope of the derivation; the abstract says 'any classical wave model'"
+            }
+          ]
+        },
+        {
+          "id": "C2-N07",
+          "type": "calibration",
+          "proposition": "CONTROL EXPERIMENT. A pulsed photodiode, whose light is classically describable, was run at trigger rate and at p_r and p_t adjusted to the same values as the actual experiment, and was verified in detail to obey inequality (7).",
+          "status": "verified_primary",
+          "evidenceClasses": [
+            "CAL",
+            "OBS"
+          ],
+          "depth": 1,
+          "sensitivity": "verdict_capable",
+          "locators": [
+            {
+              "sourceId": "GRANGIER1986",
+              "manifestation": "iop_epl",
+              "locator": "printed p. 177, footnote 2 = PDF p. 6",
+              "supportScope": "the printed control description; no numbers are printed for it"
+            }
+          ]
+        },
+        {
+          "id": "C2-N08",
+          "type": "instrument_response",
+          "proposition": "The gate is realized with two time-to-amplitude converters followed by threshold circuits, fed on START by the trigger photomultiplier and on STOP by either detection arm; the two gates are adjusted and superimposed within 0.1 nanosecond, and a third converter permanently monitors the gating.",
+          "status": "verified_primary",
+          "evidenceClasses": [
+            "OBS",
+            "CAL"
+          ],
+          "depth": 1,
+          "sensitivity": "precision_only",
+          "locators": [
+            {
+              "sourceId": "GRANGIER1986",
+              "manifestation": "iop_epl",
+              "locator": "printed p. 176 = PDF p. 5",
+              "supportScope": "the printed gating chain and the printed 0.1 ns superposition tolerance"
+            }
+          ]
+        },
+        {
+          "id": "C2-N09",
+          "type": "sample_or_source_characterization",
+          "proposition": "The source is a two-photon radiative cascade emitting pairs at two different frequencies, with intermediate-state lifetime 4.7 nanoseconds and exponentially distributed detection intervals. The cascade itself is \"described elsewhere\", in reference [10].",
+          "status": "source_asserted",
+          "evidenceClasses": [
+            "OBS",
+            "REC"
+          ],
+          "depth": 1,
+          "sensitivity": "verdict_capable",
+          "locators": [
+            {
+              "sourceId": "GRANGIER1986",
+              "manifestation": "iop_epl",
+              "locator": "printed p. 174 = PDF p. 3, with reference [10] on printed p. 179",
+              "supportScope": "the printed lifetime and the printed delegation to reference [10]"
+            }
+          ]
+        },
+        {
+          "id": "C2-N10",
+          "type": "theoretical_model",
+          "proposition": "The quantum prediction, the paper's eq. (8), is alpha equal to (2 f(w) N w plus (N w) squared) divided by (f(w) plus N w) squared, whose \"missing term\" f(w) squared is the anticorrelation.",
+          "status": "reproduced",
+          "evidenceClasses": [
+            "FORM"
+          ],
+          "depth": 1,
+          "sensitivity": "precision_only",
+          "locators": [
+            {
+              "sourceId": "GRANGIER1986",
+              "manifestation": "iop_epl",
+              "locator": "printed pp. 175-176, eqs. (7b), (7b'), (7c), (8) = PDF pp. 4-5",
+              "supportScope": "printed equations"
+            },
+            {
+              "sourceId": "OPUS-P4-R2",
+              "manifestation": "reproduction",
+              "locator": "grangier1986_alpha_from_rates/result.txt",
+              "supportScope": "eq. (8) evaluated and inverted at the printed operating point"
+            }
+          ]
+        },
+        {
+          "id": "C2-N11",
+          "type": "entity_identification",
+          "proposition": "HIDDEN ENTITY STEP, FIRST OF THREE. The paper asserts that during a gate the probability of detecting a second-frequency photon from the SAME ATOM that emitted the trigger photon is much larger than that of detecting one from any other atom, and concludes \"we are then in a situation close to an ideal single-photon state emission\". This same-atom attribution is not measured; it is the inequality N w much less than f(w) restated in the language of individual atoms.",
+          "status": "verified_primary",
+          "evidenceClasses": [
+            "INT",
+            "FORM"
+          ],
+          "depth": 2,
+          "sensitivity": "verdict_capable",
+          "locators": [
+            {
+              "sourceId": "GRANGIER1986",
+              "manifestation": "iop_epl",
+              "locator": "printed p. 175, first paragraph = PDF p. 4",
+              "supportScope": "the printed same-atom sentence and the printed conclusion drawn from it"
+            }
+          ]
+        },
+        {
+          "id": "C2-N12",
+          "type": "quantity_definition",
+          "proposition": "The measured probabilities are p_t equal to N_t over N1, p_r equal to N_r over N1 and p_c equal to N_c over N1, all conditioned on the gate; the anticorrelation parameter is the ratio of p_c to the product p_r p_t.",
+          "status": "verified_primary",
+          "evidenceClasses": [
+            "FORM"
+          ],
+          "depth": 2,
+          "sensitivity": "precision_only",
+          "locators": [
+            {
+              "sourceId": "GRANGIER1986",
+              "manifestation": "iop_epl",
+              "locator": "printed p. 174 = PDF p. 3",
+              "supportScope": "printed definitions"
+            }
+          ]
+        },
+        {
+          "id": "C2-N13",
+          "type": "auxiliary_assumption",
+          "proposition": "STRUCTURAL RESULT. Substituting the printed eqs. (7b), (7b') and (7c) into the definition of alpha shows the global detection efficiencies of the two arms cancel identically. Absolute detector efficiency is therefore NOT load-bearing for this criterion. This is the opposite of the situation in P4-C3, where efficiency enters the bound linearly.",
+          "status": "reproduced",
+          "evidenceClasses": [
+            "FORM"
+          ],
+          "depth": 2,
+          "sensitivity": "precision_only",
+          "locators": [
+            {
+              "sourceId": "OPUS-P4-R2",
+              "manifestation": "reproduction",
+              "locator": "grangier1986_alpha_from_rates/result.txt",
+              "supportScope": "the printed equations and the cancellation derived from them"
+            }
+          ]
+        },
+        {
+          "id": "C2-N14",
+          "type": "auxiliary_assumption",
+          "proposition": "The factor f(w) is the product of the gate-decay overlap 1 minus exp(-w/tau) with a factor slightly greater than one arising from the angular correlation between the two cascade photons, taken from reference [11]. It is stated to be very close to 1 but no value is printed.",
+          "status": "source_asserted",
+          "evidenceClasses": [
+            "FORM",
+            "CAL"
+          ],
+          "depth": 2,
+          "sensitivity": "precision_only",
+          "locators": [
+            {
+              "sourceId": "GRANGIER1986",
+              "manifestation": "iop_epl",
+              "locator": "printed p. 176 = PDF p. 5, with reference [11] on printed p. 179",
+              "supportScope": "the printed composition of f(w) and its delegation to reference [11]"
+            }
+          ]
+        },
+        {
+          "id": "C2-N15",
+          "type": "calibration",
+          "proposition": "Dark rates are printed and their effect on alpha is signed: alpha is linear in N1 and the printed N1 includes its 300 per second dark rate, so dark triggers inflate alpha by about 3.5 per cent, and the arm dark fraction by a further 0.8 per cent. Both biases weaken rather than manufacture the reported violation.",
+          "status": "reproduced",
+          "evidenceClasses": [
+            "CAL",
+            "STAT"
+          ],
+          "depth": 2,
+          "sensitivity": "precision_only",
+          "locators": [
+            {
+              "sourceId": "OPUS-P4-R2",
+              "manifestation": "reproduction",
+              "locator": "grangier1986_alpha_from_rates/result.txt",
+              "supportScope": "the printed dark rates and the sign and size of their effect"
+            }
+          ]
+        },
+        {
+          "id": "C2-N16",
+          "type": "calibration",
+          "proposition": "The trigger-arm efficiency, never printed in the article text, is recovered as about 6.3 times ten to the minus four from the double abscissa of fig. 2 together with the printed gate width of 9 nanoseconds. Two independent axis label pairs give the same value.",
+          "status": "reproduced",
+          "evidenceClasses": [
+            "CAL"
+          ],
+          "depth": 3,
+          "sensitivity": "precision_only",
+          "locators": [
+            {
+              "sourceId": "GRANGIER1986",
+              "manifestation": "iop_epl",
+              "locator": "printed p. 176, fig. 2 double abscissa = PDF p. 5",
+              "supportScope": "Printed axis NUMERALS only. No data point was digitized; the pilot prohibition on figure digitization is respected."
+            },
+            {
+              "sourceId": "OPUS-P4-R2",
+              "manifestation": "reproduction",
+              "locator": "grangier1986_alpha_from_rates/result.txt",
+              "supportScope": "the derived efficiency and the operating-point consistency it enables"
+            }
+          ]
+        },
+        {
+          "id": "C2-N17",
+          "type": "auxiliary_assumption",
+          "proposition": "The gate width is an OPTIMIZED analysis parameter, not a fixed instrument property: w is chosen to maximize the quantity (1 minus alpha) divided by the standard deviation on alpha, which yields 9 nanoseconds. The article separately describes the gate duration as twice the cascade lifetime, which would be 9.4 nanoseconds.",
+          "status": "verified_primary",
+          "evidenceClasses": [
+            "CAL",
+            "STAT"
+          ],
+          "depth": 2,
+          "sensitivity": "precision_only",
+          "locators": [
+            {
+              "sourceId": "GRANGIER1986",
+              "manifestation": "iop_epl",
+              "locator": "printed p. 174 = PDF p. 3 and printed p. 176 = PDF p. 5",
+              "supportScope": "the two printed statements of the gate width and the printed optimization criterion"
+            }
+          ]
+        },
+        {
+          "id": "C2-N18",
+          "type": "auxiliary_assumption",
+          "proposition": "Everything measured is conditioned on the trigger. The bounded quantity is a heralded, gate-averaged coincidence probability, not an unconditioned property of a free field.",
+          "status": "verified_primary",
+          "evidenceClasses": [
+            "FORM"
+          ],
+          "depth": 2,
+          "sensitivity": "verdict_capable",
+          "locators": [
+            {
+              "sourceId": "GRANGIER1986",
+              "manifestation": "iop_epl",
+              "locator": "printed pp. 174-175 = PDF pp. 3-4",
+              "supportScope": "the printed gate construction and the printed ensemble-of-gates averaging"
+            }
+          ]
+        },
+        {
+          "id": "C2-N19",
+          "type": "theoretical_model",
+          "proposition": "Even the quantum prediction is nonzero here: eq. (8) retains a multi-cascade term of order (N w) squared, so perfect anticorrelation is not predicted for this source. The residual is a source property, not a detector artefact.",
+          "status": "verified_primary",
+          "evidenceClasses": [
+            "FORM"
+          ],
+          "depth": 2,
+          "sensitivity": "interpretation_only",
+          "locators": [
+            {
+              "sourceId": "GRANGIER1986",
+              "manifestation": "iop_epl",
+              "locator": "printed pp. 175-176, eq. (8) = PDF pp. 4-5",
+              "supportScope": "printed equation structure"
+            }
+          ]
+        },
+        {
+          "id": "C2-N20",
+          "type": "observation",
+          "proposition": "The interference half reports a fringe visibility of 98.7 per cent plus or minus 0.5 per cent obtained with light from the actual source but WITHOUT ANY GATING SYSTEM, with photomultiplier dark rates subtracted in the definition of visibility; the gated result is stated only as greater than 98 per cent.",
+          "status": "verified_primary",
+          "evidenceClasses": [
+            "OBS",
+            "CAL"
+          ],
+          "depth": 1,
+          "sensitivity": "interpretation_only",
+          "locators": [
+            {
+              "sourceId": "GRANGIER1986",
+              "manifestation": "iop_epl",
+              "locator": "printed p. 177 and its footnote 3, and printed p. 178 = PDF pp. 6-7",
+              "supportScope": "the printed ungated check, the printed dark-rate subtraction, and the printed gated bound"
+            }
+          ]
+        },
+        {
+          "id": "C2-N21",
+          "type": "entity_identification",
+          "proposition": "HIDDEN ENTITY STEP, SECOND OF THREE. Presenting the two halves as one demonstration requires assuming source identity across two mutually exclusive configurations. The paper states the configurations are mutually exclusive and its own footnote concedes that a quantum-nondemolition which-path measurement would destroy the interference pattern.",
+          "status": "verified_primary",
+          "evidenceClasses": [
+            "INT"
+          ],
+          "depth": 2,
+          "sensitivity": "interpretation_only",
+          "locators": [
+            {
+              "sourceId": "GRANGIER1986",
+              "manifestation": "iop_epl",
+              "locator": "printed pp. 178-179 and footnote 4 = PDF pp. 7-8",
+              "supportScope": "the printed mutual-exclusivity statement and the printed footnote"
+            }
+          ]
+        },
+        {
+          "id": "C2-N22",
+          "type": "entity_identification",
+          "proposition": "HIDDEN ENTITY STEP, THIRD OF THREE. Three distinct propositions are routinely merged: (i) the printed inequality is violated; (ii) no classical field model of the stated class can produce that value; (iii) the light is a single-photon state. Step (i) to (ii) is the derivation at C2-N03 and is sound within its class. Step (ii) to (iii) is an inference to a preferred description, licensed here only by the same-atom argument at C2-N11.",
+          "status": "unresolved",
+          "evidenceClasses": [
+            "INT"
+          ],
+          "depth": 2,
+          "sensitivity": "interpretation_only",
+          "locators": [
+            {
+              "sourceId": "GRANGIER1986",
+              "manifestation": "iop_epl",
+              "locator": "printed pp. 175, 177 and 179 = PDF pp. 4, 6 and 8",
+              "supportScope": "the three printed formulations, kept separate"
+            }
+          ]
+        },
+        {
+          "id": "C2-N23",
+          "type": "publication_record",
+          "proposition": "The article's own reference [4] is Kimble, Dagenais and Mandel (1977), an earlier and differently shaped nonclassicality result, held in this corpus. Its existence bears on any unqualified priority claim but is not a premise of the anticorrelation result.",
+          "status": "verified_record",
+          "evidenceClasses": [
+            "REC"
+          ],
+          "depth": 2,
+          "sensitivity": "interpretation_only",
+          "locators": [
+            {
+              "sourceId": "GRANGIER1986",
+              "manifestation": "iop_epl",
+              "locator": "printed p. 179, reference [4] = PDF p. 8",
+              "supportScope": "the printed reference; citation, not logical dependence"
+            }
+          ]
+        },
+        {
+          "id": "C2-N24",
+          "type": "auxiliary_assumption",
+          "proposition": "The article's footnote 1 explicitly REJECTS the energy-per-coherence-time argument for single-photon character as \"not fully conclusive\", noting the photoelectric effect can be assigned to the quantum nature of the atomic detector. The paper thus rules out one entity argument while advancing another.",
+          "status": "verified_primary",
+          "evidenceClasses": [
+            "INT"
+          ],
+          "depth": 2,
+          "sensitivity": "interpretation_only",
+          "locators": [
+            {
+              "sourceId": "GRANGIER1986",
+              "manifestation": "iop_epl",
+              "locator": "printed p. 174, footnote 1 = PDF p. 3",
+              "supportScope": "the printed rejection and its stated ground"
+            }
+          ]
+        },
+        {
+          "id": "C2-F01",
+          "type": "unresolved_frontier",
+          "proposition": "No raw counts, per-run records, or count time series are published; the article prints only the operating-point summary.",
+          "status": "inaccessible",
+          "evidenceClasses": [
+            "OBS"
+          ],
+          "depth": 2,
+          "sensitivity": "precision_only",
+          "locators": []
+        },
+        {
+          "id": "C2-F02",
+          "type": "unresolved_frontier",
+          "proposition": "The coincidence window and any accidental-subtraction procedure are not specified. The gate width is printed, but whether a coincidence resolving time separate from the gate is applied, and whether accidentals are subtracted before computing alpha, is not stated.",
+          "status": "unresolved",
+          "evidenceClasses": [
+            "CAL",
+            "STAT"
+          ],
+          "depth": 2,
+          "sensitivity": "verdict_capable",
+          "locators": []
+        },
+        {
+          "id": "C2-F03",
+          "type": "unresolved_frontier",
+          "proposition": "The error model behind the printed sigma of 0.06 and the printed \"more than 13 standard deviations\" is not stated; whether it is counting statistics alone or includes systematics cannot be determined from the article.",
+          "status": "unresolved",
+          "evidenceClasses": [
+            "STAT"
+          ],
+          "depth": 2,
+          "sensitivity": "precision_only",
+          "locators": []
+        },
+        {
+          "id": "C2-F04",
+          "type": "unresolved_frontier",
+          "proposition": "Reference [10], Aspect, Grangier and Roger, Phys. Rev. Lett. 47, 460 (1981), is not held. The cascade source characterization on which the single-photon language depends is delegated to it.",
+          "status": "inaccessible",
+          "evidenceClasses": [
+            "OBS",
+            "REC"
+          ],
+          "depth": 2,
+          "sensitivity": "verdict_capable",
+          "locators": []
+        },
+        {
+          "id": "C2-F05",
+          "type": "unresolved_frontier",
+          "proposition": "Reference [11], Fry, Phys. Rev. A 8, 1219 (1973), is not held; the angular correlation factor inside f(w) cannot be checked.",
+          "status": "inaccessible",
+          "evidenceClasses": [
+            "FORM",
+            "REC"
+          ],
+          "depth": 2,
+          "sensitivity": "precision_only",
+          "locators": []
+        },
+        {
+          "id": "C2-F06",
+          "type": "unresolved_frontier",
+          "proposition": "Reference [1], Loudon, Rep. Prog. Phys. 43, 913 (1980), is not held; the semiclassical photodetection model is used at its printed conclusion rather than at its own derivation.",
+          "status": "inaccessible",
+          "evidenceClasses": [
+            "FORM",
+            "REC"
+          ],
+          "depth": 2,
+          "sensitivity": "verdict_capable",
+          "locators": []
+        },
+        {
+          "id": "C2-F07",
+          "type": "unresolved_frontier",
+          "proposition": "The photodiode control is reported only qualitatively; no counts, no resulting alpha, and no matched value of N w are printed for it, so its calibrating force cannot be quantified.",
+          "status": "unresolved",
+          "evidenceClasses": [
+            "CAL"
+          ],
+          "depth": 2,
+          "sensitivity": "verdict_capable",
+          "locators": []
+        },
+        {
+          "id": "C2-F08",
+          "type": "unresolved_frontier",
+          "proposition": "Figures 2, 4 and 5 were not digitized by any participant, by pilot policy; only printed axis numerals were read. The alpha-versus-N w curve and the visibility-versus-N w curve therefore contribute no data-level evidence.",
+          "status": "depth_limited",
+          "evidenceClasses": [
+            "OBS"
+          ],
+          "depth": 2,
+          "sensitivity": "precision_only",
+          "locators": []
+        }
+      ],
+      "edges": [
+        {
+          "id": "C2-E01",
+          "source": "C2-N01",
+          "target": "C2-ROOT",
+          "type": "measured_by",
+          "statement": "The root claim's observational content is the printed operating-point rate sentence; nothing else in the article carries the anticorrelation number.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C2-E02",
+          "source": "C2-N02",
+          "target": "C2-ROOT",
+          "type": "derived_from",
+          "statement": "The reported alpha is now shown to be rebuildable from the printed rates, so the summary statistic is no longer merely asserted.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C2-E03",
+          "source": "C2-N03",
+          "target": "C2-ROOT",
+          "type": "compared_to",
+          "statement": "The root claim is a claim about violating a bound, so it depends entirely on the model that supplies the bound.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C2-E04",
+          "source": "C2-N04",
+          "target": "C2-ROOT",
+          "type": "inferred_from",
+          "statement": "The operational conclusion of quantum anticorrelation is the intermediate step between measurement and entity label.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C2-E05",
+          "source": "C2-N05",
+          "target": "C2-ROOT",
+          "type": "classified_as",
+          "statement": "The root claim as worded includes the entity label, which the article itself states more weakly.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C2-E06",
+          "source": "C2-N07",
+          "target": "C2-ROOT",
+          "type": "calibrated_by",
+          "statement": "A known-classical source verified to obey the same inequality under matched probabilities is what makes the criterion a calibrated discriminator rather than an untested formula.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C2-E07",
+          "source": "C2-N09",
+          "target": "C2-ROOT",
+          "type": "conditioned_on",
+          "statement": "Everything claimed about the prepared light is a claim about this particular cascade source.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C2-E08",
+          "source": "C2-N20",
+          "target": "C2-ROOT",
+          "type": "conditioned_on",
+          "statement": "The interference half is part of the article's own case for the single-photon description but is a separate measurement in a separate configuration.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C2-E09",
+          "source": "C2-N12",
+          "target": "C2-N01",
+          "type": "derived_from",
+          "statement": "The printed rates become probabilities only through the gate-conditioned definitions.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C2-E10",
+          "source": "C2-N08",
+          "target": "C2-N01",
+          "type": "measured_by",
+          "statement": "Every printed rate is a rate of events inside a gate produced by the described electronics.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C2-E11",
+          "source": "C2-N15",
+          "target": "C2-N01",
+          "type": "corrected_by",
+          "statement": "The printed N1 and N_2 include dark contributions, so the printed alpha is a dark-inclusive quantity.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C2-E12",
+          "source": "C2-N01",
+          "target": "C2-N02",
+          "type": "derived_from",
+          "statement": "The rebuilt bound and alpha use no input other than the four printed rate quantities.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C2-E13",
+          "source": "C2-N12",
+          "target": "C2-N02",
+          "type": "derived_from",
+          "statement": "The reconstruction uses the printed probability definitions and no others.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C2-E14",
+          "source": "C2-N02",
+          "target": "C2-N04",
+          "type": "derived_from",
+          "statement": "The operational conclusion follows from the reconstructed comparison of 9 observed against 51 classically expected coincidences.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C2-E15",
+          "source": "C2-N03",
+          "target": "C2-N04",
+          "type": "compared_to",
+          "statement": "The word 'quantum' in the printed conclusion means only 'outside the semiclassical bound'.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C2-E16",
+          "source": "C2-N06",
+          "target": "C2-N03",
+          "type": "assumes",
+          "statement": "The bound holds for the stated class of classical field models and for no wider class; the abstract's phrase 'any classical wave model' is exactly this class.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C2-E17",
+          "source": "C2-N18",
+          "target": "C2-N03",
+          "type": "conditioned_on",
+          "statement": "The Cauchy-Schwarz step is taken over the ensemble of gates, so the bound is a statement about heralded intensities.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C2-E18",
+          "source": "C2-N11",
+          "target": "C2-N05",
+          "type": "inferred_from",
+          "statement": "The only argument in the article that connects the anticorrelation to a single-photon description is the same-atom attribution.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C2-E19",
+          "source": "C2-N22",
+          "target": "C2-N05",
+          "type": "inferred_from",
+          "statement": "The entity label sits at the end of a three-step chain whose last step is an inference to a preferred description, not a measurement.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C2-E20",
+          "source": "C2-N24",
+          "target": "C2-N05",
+          "type": "assumes",
+          "statement": "The article rejects the energy-per-coherence-time route to the same label, which narrows the set of arguments that may be used to support it.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C2-E21",
+          "source": "C2-N19",
+          "target": "C2-N05",
+          "type": "assumes",
+          "statement": "Since the quantum prediction is itself nonzero, the entity label cannot be justified by perfect anticorrelation.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C2-E22",
+          "source": "C2-N10",
+          "target": "C2-N11",
+          "type": "modeled_by",
+          "statement": "The same-atom assertion is the small-N w limit of the paper's own eq. (8) restated in atomic language.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C2-E23",
+          "source": "C2-N09",
+          "target": "C2-N11",
+          "type": "conditioned_on",
+          "statement": "Whether the same-atom probability dominates is a property of the cascade excitation rate, which is a source property.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C2-E24",
+          "source": "C2-N16",
+          "target": "C2-N10",
+          "type": "calibrated_by",
+          "statement": "Locating the printed operating point on the theory curve requires the trigger-arm efficiency, which is recoverable only from the figure axes.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C2-E25",
+          "source": "C2-N14",
+          "target": "C2-N10",
+          "type": "assumes",
+          "statement": "Eq. (8) is evaluated with f(w) set to one, which the article asserts and does not quantify.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C2-E26",
+          "source": "C2-N13",
+          "target": "C2-N02",
+          "type": "derived_from",
+          "statement": "Because the arm efficiencies cancel identically in alpha, the reconstruction needs no efficiency calibration and no detection-efficiency loophole applies to this criterion.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C2-E27",
+          "source": "C2-N17",
+          "target": "C2-N08",
+          "type": "conditioned_on",
+          "statement": "The gate width entering every probability is an optimized value, so the measurement point is selected on a criterion involving the result.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C2-E28",
+          "source": "C2-N21",
+          "target": "C2-N20",
+          "type": "assumes",
+          "statement": "Reading the visibility as a property of the same single-photon light requires source identity across configurations.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C2-E29",
+          "source": "C2-N15",
+          "target": "C2-N20",
+          "type": "corrected_by",
+          "statement": "The printed visibility is computed after subtracting photomultiplier dark rates, so it is a derived rather than a raw quantity.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C2-E30",
+          "source": "C2-N23",
+          "target": "C2-N05",
+          "type": "cites",
+          "statement": "Citation only. Kimble 1977 bears on priority wording, not on the validity of this anticorrelation result.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C2-E31",
+          "source": "C2-F01",
+          "target": "C2-N01",
+          "type": "documented_by",
+          "statement": "The printed summary is the deepest available observational record; the branch stops.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C2-E32",
+          "source": "C2-F02",
+          "target": "C2-N12",
+          "type": "documented_by",
+          "statement": "How a coincidence is defined and whether accidentals are subtracted is not stated; the branch stops at an exact documentation gap.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C2-E33",
+          "source": "C2-F03",
+          "target": "C2-N01",
+          "type": "documented_by",
+          "statement": "The uncertainty on alpha is printed but its construction is not; the branch stops.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C2-E34",
+          "source": "C2-F04",
+          "target": "C2-N09",
+          "type": "documented_by",
+          "statement": "The cascade characterization is delegated to an unheld source; the branch stops at an acquisition gap.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C2-E35",
+          "source": "C2-F05",
+          "target": "C2-N14",
+          "type": "documented_by",
+          "statement": "The angular-correlation factor is delegated to an unheld source; the branch stops.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C2-E36",
+          "source": "C2-F06",
+          "target": "C2-N03",
+          "type": "documented_by",
+          "statement": "The semiclassical model's own derivation is delegated to an unheld source; the branch stops.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C2-E37",
+          "source": "C2-F07",
+          "target": "C2-N07",
+          "type": "documented_by",
+          "statement": "The control experiment is unquantified in the article; the branch stops.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C2-E38",
+          "source": "C2-F08",
+          "target": "C2-N10",
+          "type": "documented_by",
+          "statement": "The theory-versus-data curve is not digitized by policy; only the printed axis numerals were used.",
+          "reviewStatus": "passed"
+        }
+      ],
+      "frontierSummary": {
+        "count": 8,
+        "verdict_capable_frontiers": [
+          "C2-F02",
+          "C2-F04",
+          "C2-F06",
+          "C2-F07"
+        ],
+        "precision_only_frontiers": [
+          "C2-F01",
+          "C2-F03",
+          "C2-F05",
+          "C2-F08"
+        ],
+        "interpretation_only_frontiers": [],
+        "acquisition_gaps": [
+          "Aspect, Grangier and Roger, Phys. Rev. Lett. 47, 460 (1981)",
+          "Fry, Phys. Rev. A 8, 1219 (1973)",
+          "Loudon, Rep. Prog. Phys. 43, 913 (1980)"
+        ]
+      },
+      "sensitivitySummary": {
+        "verdict_capable": [
+          {
+            "node_id": "C2-N03",
+            "mechanism": "If the semiclassical bound is derived under assumptions the experiment violates, the whole comparison collapses; the derivation is used at its conclusion because reference [1] is not held."
+          },
+          {
+            "node_id": "C2-F02",
+            "mechanism": "An undisclosed accidental subtraction applied to the 9 coincidences would change alpha directly; 9 counts is small enough that a few subtracted accidentals matter."
+          },
+          {
+            "node_id": "C2-N07",
+            "mechanism": "The photodiode control is the only empirical guard against the criterion being violated by an instrumental artefact rather than by the light; it is reported without numbers."
+          },
+          {
+            "node_id": "C2-N09",
+            "mechanism": "The cascade source properties fix N w, which fixes the predicted alpha; they are delegated to an unheld source."
+          },
+          {
+            "node_id": "C2-N11",
+            "mechanism": "The same-atom attribution is the sole bridge from the operational violation to the single-photon description; if it fails the violation stands but the entity label does not."
+          },
+          {
+            "node_id": "C2-N18",
+            "mechanism": "Removing the trigger conditioning changes the quantity being bounded, and the bound no longer applies."
+          },
+          {
+            "node_id": "C2-N02",
+            "mechanism": "Recorded as verdict_capable because it is now the load-bearing reconstruction: if the printed rates do not mean what the reconstruction assumes, the reported alpha is unsupported."
+          }
+        ],
+        "precision_only": [
+          {
+            "node_id": "C2-N15",
+            "mechanism": "Dark counts inflate alpha by about 4 per cent in total and in the conservative direction; correcting them would strengthen, not weaken, the reported violation."
+          },
+          {
+            "node_id": "C2-N13",
+            "mechanism": "Detector efficiencies cancel identically, so no efficiency uncertainty propagates into alpha at all."
+          },
+          {
+            "node_id": "C2-N16",
+            "mechanism": "The recovered trigger efficiency only locates the operating point; the printed alpha does not depend on it."
+          },
+          {
+            "node_id": "C2-N17",
+            "mechanism": "The 9 against 9.4 nanosecond gate discrepancy shifts N w by about 4 per cent, far inside the printed uncertainty on alpha."
+          },
+          {
+            "node_id": "C2-N08",
+            "mechanism": "Gate superposition to 0.1 nanosecond within a 9 nanosecond gate is a one per cent effect."
+          },
+          {
+            "node_id": "C2-N10",
+            "mechanism": "Eq. (8) evaluated at the printed operating point gives 0.205 against the printed 0.18 plus or minus 0.06, a 0.4 sigma agreement."
+          }
+        ],
+        "interpretation_only": [
+          {
+            "node_id": "C2-N05",
+            "mechanism": "The entity label changes what the result is called, not what was measured."
+          },
+          {
+            "node_id": "C2-N06",
+            "mechanism": "The scope of the excluded class determines what may be said to have been refuted; classical particle models are untouched."
+          },
+          {
+            "node_id": "C2-N21",
+            "mechanism": "Source identity across mutually exclusive configurations governs whether the two halves may be narrated as one demonstration."
+          },
+          {
+            "node_id": "C2-N19",
+            "mechanism": "Nonzero predicted alpha rules out 'perfect indivisibility' as a description but changes no number."
+          },
+          {
+            "node_id": "C2-N22",
+            "mechanism": "The three-step chain determines which of the three propositions a downstream citation is entitled to."
+          },
+          {
+            "node_id": "C2-N23",
+            "mechanism": "Priority wording only."
+          },
+          {
+            "node_id": "C2-N24",
+            "mechanism": "The article's rejection of a rival entity argument constrains admissible retellings."
+          }
+        ],
+        "unknown": []
+      },
+      "survival": "Remove or vary every unresolved verdict-capable frontier and what survives is strong and narrow. The printed rates are internally consistent to the point that alpha and the classical bound are both rebuildable from them; the detection efficiencies cancel identically, so the result carries no efficiency loophole; and the dark-count biases are signed in the conservative direction. A hostile reading that assumes an undisclosed accidental subtraction, an unheld and possibly weaker semiclassical derivation, and an uncharacterized cascade still leaves an observed coincidence count of 9 against a classical expectation of 51 built from the paper's own singles rates. What does NOT survive adversarial variation is the ENTITY half of the root claim. The step from \"no classical field model of the stated class reproduces this\" to \"the prepared light is a single-photon source\" rests entirely on the unmeasured same-atom attribution at C2-N11, and the article's own conclusion claims only \"some properties of a single-photon state\" while specifying what an ideal source would have required. The nonclassicality half of the root claim survives; the single-photon-entity half does not, and the article does not assert it in the strong form."
+    },
+    {
+      "rootId": "P4-C3-DONADI-DP-EXCLUSION",
+      "slug": "donadi-collapse",
+      "title": "What did the underground test exclude?",
+      "shortTitle": "Gravity-related collapse",
+      "citation": "S. Donadi et al., Nature Physics 17, 74–78 (2021)",
+      "recordUrl": "https://arxiv.org/abs/2111.13490",
+      "year": 2021,
+      "accent": "violet",
+      "rootClaim": "The underground germanium measurement excludes the parameter-free Diosi-Penrose collapse model over the claimed range.",
+      "counts": {
+        "nodes": 34,
+        "edges": 40,
+        "frontiers": 8,
+        "verdictCapableFrontiers": 5
+      },
+      "nodes": [
+        {
+          "id": "C3-ROOT",
+          "type": "root_claim",
+          "proposition": "The underground germanium measurement excludes the parameter-free Diosi-Penrose collapse model over the claimed range.",
+          "status": "source_asserted",
+          "evidenceClasses": [
+            "OBS",
+            "STAT",
+            "FORM",
+            "INT"
+          ],
+          "depth": 0,
+          "sensitivity": "verdict_capable",
+          "locators": [
+            {
+              "sourceId": "DONADI2021",
+              "manifestation": "arxiv_v1",
+              "locator": "manuscript pp. 14-16 = PDF pp. 14-16",
+              "supportScope": "the printed bound, the printed prediction, and the printed exclusion sentence"
+            }
+          ]
+        },
+        {
+          "id": "C3-N01",
+          "type": "observation",
+          "proposition": "A total of 576 counts is measured in the region of interest 1000 to 3800 keV over an acquisition period of about 62 days, in August 2014 and August 2015, at the Gran Sasso underground laboratory.",
+          "status": "verified_primary",
+          "evidenceClasses": [
+            "OBS"
+          ],
+          "depth": 1,
+          "sensitivity": "verdict_capable",
+          "locators": [
+            {
+              "sourceId": "DONADI2021",
+              "manifestation": "arxiv_v1",
+              "locator": "manuscript pp. 11-12 = PDF pp. 11-12",
+              "supportScope": "printed counts, printed exposure, printed dates"
+            }
+          ]
+        },
+        {
+          "id": "C3-N02",
+          "type": "data_reduction",
+          "proposition": "A simulated background of 506 counts in the same region is the comparison quantity. It is a Monte Carlo output, not a measurement.",
+          "status": "source_asserted",
+          "evidenceClasses": [
+            "CAL",
+            "STAT"
+          ],
+          "depth": 1,
+          "sensitivity": "verdict_capable",
+          "locators": [
+            {
+              "sourceId": "DONADI2021",
+              "manifestation": "arxiv_v1",
+              "locator": "manuscript p. 12 = PDF p. 12",
+              "supportScope": "the printed simulated count"
+            }
+          ]
+        },
+        {
+          "id": "C3-N03",
+          "type": "statistical_inference",
+          "proposition": "A Bayesian posterior on total expected counts gives an upper limit 617.07 at probability 0.95. With the operative SI coefficient a=1.756e-29 cubic metres, this gives R0 greater than 0.544e-10 metres, reproducing the printed rounded 0.54e-10 bound.",
+          "status": "reproduced",
+          "evidenceClasses": [
+            "STAT"
+          ],
+          "depth": 1,
+          "sensitivity": "verdict_capable",
+          "locators": [
+            {
+              "sourceId": "DONADI2021",
+              "manifestation": "arxiv_v1",
+              "locator": "SI pp. 38-39 = PDF pp. 38-39; Methods p. 30 = PDF p. 30; result manuscript p. 14 = PDF p. 14",
+              "supportScope": "the printed equations and the printed numerical result"
+            },
+            {
+              "sourceId": "OPUS-P4-R3",
+              "manifestation": "reproduction",
+              "locator": "donadi2021_bound_and_sensitivity/result.txt",
+              "supportScope": "Upper limit reproduced as 617.07 against the printed 617; bound reproduced as 0.549 against the printed 0.54 times ten to the minus ten metres."
+            }
+          ]
+        },
+        {
+          "id": "C3-N04",
+          "type": "theoretical_model",
+          "proposition": "The collapse-induced photon emission rate, the paper's eq. (4), is proportional to G e squared N squared N_a divided by R0 cubed and by the photon frequency, so the spectrum falls as one over frequency.",
+          "status": "source_asserted",
+          "evidenceClasses": [
+            "FORM"
+          ],
+          "depth": 1,
+          "sensitivity": "verdict_capable",
+          "locators": [
+            {
+              "sourceId": "DONADI2021",
+              "manifestation": "arxiv_v1",
+              "locator": "manuscript p. 8 = PDF p. 8; derivation in the SI",
+              "supportScope": "the printed rate formula; the derivation itself was not re-derived"
+            }
+          ]
+        },
+        {
+          "id": "C3-N05",
+          "type": "entity_identification",
+          "proposition": "HIDDEN ENTITY STEP, THE ONE THAT MAKES THE MODEL PARAMETER-FREE. The model's spatial cut-off R0 is IDENTIFIED with the root mean square displacement of a nucleus in the lattice, following Penrose's proposal that R0 is \"the size of the wave function of the nuclei\", and evaluated from a Debye-Waller factor to give 0.05 times ten to the minus ten metres.",
+          "status": "reproduced",
+          "evidenceClasses": [
+            "FORM",
+            "INT"
+          ],
+          "depth": 1,
+          "sensitivity": "verdict_capable",
+          "locators": [
+            {
+              "sourceId": "DONADI2021",
+              "manifestation": "arxiv_v1",
+              "locator": "manuscript p. 16 = PDF p. 16; fig. 5 caption manuscript p. 15 = PDF p. 15",
+              "supportScope": "the printed identification and the printed numerical evaluation"
+            },
+            {
+              "sourceId": "OPUS-P4-R3",
+              "manifestation": "reproduction",
+              "locator": "donadi2021_bound_and_sensitivity/result.txt",
+              "supportScope": "0.0503 reproduced from B equal to 0.20 square angstrom"
+            }
+          ]
+        },
+        {
+          "id": "C3-N06",
+          "type": "interpretation",
+          "proposition": "Because the bound lies more than an order of magnitude above the identified prediction, this parameter-free version of the model is declared excluded. The article states in the same passage that letting R0 float, or adding dissipation, remains available.",
+          "status": "verified_primary",
+          "evidenceClasses": [
+            "INT"
+          ],
+          "depth": 1,
+          "sensitivity": "interpretation_only",
+          "locators": [
+            {
+              "sourceId": "DONADI2021",
+              "manifestation": "arxiv_v1",
+              "locator": "manuscript pp. 16-17 = PDF pp. 16-17",
+              "supportScope": "the printed exclusion sentence and the printed alternatives paragraph"
+            }
+          ]
+        },
+        {
+          "id": "C3-N07",
+          "type": "data_reduction",
+          "proposition": "The expected signal is summed over all setup components and reduced to the operative Supplementary-Information coefficient a = 1.756 times ten to the minus twenty-nine cubic metres, rounded to about 1.8 times ten to the minus twenty-nine in the main text, so expected signal counts equal a divided by R0 cubed.",
+          "status": "source_asserted",
+          "evidenceClasses": [
+            "CAL",
+            "FORM"
+          ],
+          "depth": 1,
+          "sensitivity": "verdict_capable",
+          "locators": [
+            {
+              "sourceId": "DONADI2021",
+              "manifestation": "arxiv_v1",
+              "locator": "manuscript p. 14, eq. (5) = PDF p. 14",
+              "supportScope": "the printed aggregation and the printed constant"
+            },
+            {
+              "sourceId": "OPUS-P4-R3",
+              "manifestation": "reproduction",
+              "locator": "donadi2021_bound_and_sensitivity/result.txt",
+              "supportScope": "Order check only: eq. (4) evaluated for the germanium crystal alone at unit efficiency gives 1.04 times ten to the minus twenty-eight, so the printed constant implies a mean region-of-interest detection efficiency of 0.17, which is physically admissible. Exact reconstruction is impossible because the per-component efficiencies are published only as a figure."
+            },
+            {
+              "sourceId": "SOL-P4-C3-V1",
+              "manifestation": "independent frozen graph plus peer review",
+              "locator": "Deterministic reproduction archived with the audit",
+              "supportScope": "operative coefficient 1.756e-29 m^3 and corrected 0.544e-10 m bound"
+            }
+          ]
+        },
+        {
+          "id": "C3-N08",
+          "type": "auxiliary_assumption",
+          "proposition": "The expected total is written as background plus signal plus 2. The additive 2 is printed without explanation; it is consistent with taking a posterior mean of the form count plus one for each of the two Poisson components, but the article does not say so.",
+          "status": "unresolved",
+          "evidenceClasses": [
+            "STAT"
+          ],
+          "depth": 2,
+          "sensitivity": "precision_only",
+          "locators": [
+            {
+              "sourceId": "DONADI2021",
+              "manifestation": "arxiv_v1",
+              "locator": "Methods eq. (19) p. 30 = PDF p. 30; SI eq. (40) p. 39 = PDF p. 39",
+              "supportScope": "the printed offset, appearing in both places"
+            }
+          ]
+        },
+        {
+          "id": "C3-N09",
+          "type": "statistical_inference",
+          "proposition": "The background count is treated as EXACTLY KNOWN. No uncertainty on the simulated background is propagated into the posterior, although the article states the measured and simulated spectra agree only to 88 per cent in the region of interest.",
+          "status": "verified_primary",
+          "evidenceClasses": [
+            "STAT"
+          ],
+          "depth": 2,
+          "sensitivity": "verdict_capable",
+          "locators": [
+            {
+              "sourceId": "DONADI2021",
+              "manifestation": "arxiv_v1",
+              "locator": "SI pp. 38-39 = PDF pp. 38-39; agreement figure manuscript p. 12 = PDF p. 12",
+              "supportScope": "the printed likelihood, in which only the measured count is stochastic"
+            }
+          ]
+        },
+        {
+          "id": "C3-N10",
+          "type": "auxiliary_assumption",
+          "proposition": "The Heaviside prior support boundary is set at a minimum cut-off of ten to the minus fourteen metres. Because the corresponding maximum expected count is about 1.8 times ten to the thirteen, the truncation is numerically inert and the posterior is indistinguishable from the flat-prior one.",
+          "status": "reproduced",
+          "evidenceClasses": [
+            "STAT"
+          ],
+          "depth": 2,
+          "sensitivity": "precision_only",
+          "locators": [
+            {
+              "sourceId": "DONADI2021",
+              "manifestation": "arxiv_v1",
+              "locator": "SI eqs. (39)-(42) pp. 39-40 = PDF pp. 39-40",
+              "supportScope": "the printed prior"
+            },
+            {
+              "sourceId": "OPUS-P4-R3",
+              "manifestation": "reproduction",
+              "locator": "donadi2021_bound_and_sensitivity/result.txt",
+              "supportScope": "truncated and untruncated quantiles agree to better than one part in a million"
+            }
+          ]
+        },
+        {
+          "id": "C3-N11",
+          "type": "observation",
+          "proposition": "THIS IS NOT A NULL MEASUREMENT. The measured 576 counts exceed the simulated 506 by 70, which is 2.9 times the square root of the measured count. The article attributes the imperfect agreement to residual cosmic rays and to lead-shield bremsstrahlung, principally at low energy.",
+          "status": "reproduced",
+          "evidenceClasses": [
+            "OBS",
+            "STAT"
+          ],
+          "depth": 2,
+          "sensitivity": "precision_only",
+          "locators": [
+            {
+              "sourceId": "DONADI2021",
+              "manifestation": "arxiv_v1",
+              "locator": "manuscript p. 12 = PDF p. 12",
+              "supportScope": "the two printed counts and the printed agreement figure"
+            },
+            {
+              "sourceId": "OPUS-P4-R3",
+              "manifestation": "reproduction",
+              "locator": "donadi2021_bound_and_sensitivity/result.txt",
+              "supportScope": "The excess corresponds to a cut-off of 0.636 times ten to the minus ten metres if read as signal; because the limit is one-sided, an excess can only weaken the bound, never manufacture it."
+            }
+          ]
+        },
+        {
+          "id": "C3-N12",
+          "type": "auxiliary_assumption",
+          "proposition": "The region of interest is selected on two grounds at once: it falls inside the interval where the theoretical emission model is stated to be valid, AND it is the range where the simulated background agrees with the data, the low-energy region being excluded because agreement there is worse.",
+          "status": "verified_primary",
+          "evidenceClasses": [
+            "STAT",
+            "CAL"
+          ],
+          "depth": 2,
+          "sensitivity": "verdict_capable",
+          "locators": [
+            {
+              "sourceId": "DONADI2021",
+              "manifestation": "arxiv_v1",
+              "locator": "manuscript p. 12 = PDF p. 12",
+              "supportScope": "the printed justification, which states both grounds in the same paragraph"
+            }
+          ]
+        },
+        {
+          "id": "C3-N13",
+          "type": "calibration",
+          "proposition": "The background is computed by a GEANT4-based Monte Carlo taking the measured residual radionuclide activities of each material as input and propagating emission probabilities, decay schemes, photon transport and detection efficiencies.",
+          "status": "source_asserted",
+          "evidenceClasses": [
+            "CAL"
+          ],
+          "depth": 2,
+          "sensitivity": "verdict_capable",
+          "locators": [
+            {
+              "sourceId": "DONADI2021",
+              "manifestation": "arxiv_v1",
+              "locator": "manuscript pp. 12-13 = PDF pp. 12-13; Methods pp. 30-31; SI pp. 37-38",
+              "supportScope": "the printed description of the simulation chain"
+            }
+          ]
+        },
+        {
+          "id": "C3-N14",
+          "type": "calibration",
+          "proposition": "Signal detection efficiencies are obtained by generating ten to the eighth photons in each detector component at 200 keV spacing, giving fifteen points across the region of interest, and fitting each efficiency distribution with a polynomial.",
+          "status": "source_asserted",
+          "evidenceClasses": [
+            "CAL"
+          ],
+          "depth": 2,
+          "sensitivity": "verdict_capable",
+          "locators": [
+            {
+              "sourceId": "DONADI2021",
+              "manifestation": "arxiv_v1",
+              "locator": "Methods p. 31 = PDF p. 31; SI pp. 36-37 and fig. 6 = PDF pp. 36-37",
+              "supportScope": "the printed generation scheme; the resulting curves appear only as a figure"
+            }
+          ]
+        },
+        {
+          "id": "C3-N15",
+          "type": "sample_or_source_characterization",
+          "proposition": "A coaxial p-type high-purity germanium detector, 8.0 centimetres in diameter and 8.0 centimetres long, with 375 cubic centimetres of active volume and a 0.075 millimetre lithium-doped inactive layer, inside copper and lead shielding, with 62 kilograms of oxygen-free copper in Marinelli geometry as the surrounding sample.",
+          "status": "verified_primary",
+          "evidenceClasses": [
+            "OBS"
+          ],
+          "depth": 2,
+          "sensitivity": "precision_only",
+          "locators": [
+            {
+              "sourceId": "DONADI2021",
+              "manifestation": "arxiv_v1",
+              "locator": "manuscript pp. 9-10 = PDF pp. 9-10",
+              "supportScope": "printed geometry and materials"
+            }
+          ]
+        },
+        {
+          "id": "C3-N16",
+          "type": "instrument_response",
+          "proposition": "Acquisition is by a Lynx digital signal analyser under GENIE 2000; the spectrum contains only events passing a digital pulse-shape noise filter whose rejection efficiency is stated to be better than 99 per cent.",
+          "status": "source_asserted",
+          "evidenceClasses": [
+            "OBS",
+            "CAL"
+          ],
+          "depth": 2,
+          "sensitivity": "precision_only",
+          "locators": [
+            {
+              "sourceId": "DONADI2021",
+              "manifestation": "arxiv_v1",
+              "locator": "manuscript pp. 10 and 12 = PDF pp. 10 and 12",
+              "supportScope": "printed acquisition chain and printed filter efficiency"
+            }
+          ]
+        },
+        {
+          "id": "C3-N17",
+          "type": "reference_standard",
+          "proposition": "The energy scale is exhibited through residual radionuclide lines present in the spectrum itself, cobalt-60 and potassium-40 being identified, at a natural binning of 1 keV. No separate calibration-source procedure is described in the held manifestation.",
+          "status": "source_asserted",
+          "evidenceClasses": [
+            "CAL"
+          ],
+          "depth": 2,
+          "sensitivity": "precision_only",
+          "locators": [
+            {
+              "sourceId": "DONADI2021",
+              "manifestation": "arxiv_v1",
+              "locator": "manuscript pp. 11-12, fig. 3 and its caption = PDF pp. 11-12",
+              "supportScope": "printed line identifications and printed binning"
+            }
+          ]
+        },
+        {
+          "id": "C3-N18",
+          "type": "entity_identification",
+          "proposition": "HIDDEN ENTITY STEP, SECOND OF THREE. A COHERENCE-DOMAIN choice fixes the rate: protons within one nucleus are taken to radiate coherently, giving the atomic-number-squared factor, while electrons are dropped as conservative. The photon wavelength window is chosen precisely so that nuclei act as single charged objects and electrons do not.",
+          "status": "verified_primary",
+          "evidenceClasses": [
+            "FORM",
+            "INT"
+          ],
+          "depth": 2,
+          "sensitivity": "verdict_capable",
+          "locators": [
+            {
+              "sourceId": "DONADI2021",
+              "manifestation": "arxiv_v1",
+              "locator": "manuscript pp. 7-8 = PDF pp. 7-8",
+              "supportScope": "the printed coherence argument and the printed wavelength window"
+            }
+          ]
+        },
+        {
+          "id": "C3-N19",
+          "type": "auxiliary_assumption",
+          "proposition": "The signal is generated in every material of the apparatus, not only in the germanium, so the aggregate constant depends on a per-component inventory of atom counts and atomic numbers that is not tabulated in the held manifestation.",
+          "status": "source_asserted",
+          "evidenceClasses": [
+            "CAL"
+          ],
+          "depth": 2,
+          "sensitivity": "verdict_capable",
+          "locators": [
+            {
+              "sourceId": "DONADI2021",
+              "manifestation": "arxiv_v1",
+              "locator": "manuscript pp. 13-14 = PDF pp. 13-14",
+              "supportScope": "the printed statement that the sum runs over setup components"
+            }
+          ]
+        },
+        {
+          "id": "C3-N20",
+          "type": "statistical_inference",
+          "proposition": "A Compton-degradation improvement factor of about 1.62, from primary photons above the detector threshold scattering down into the region of interest, is estimated under deliberately exaggerated assumptions and is NOT applied. The published bound is therefore conservative by that factor.",
+          "status": "verified_primary",
+          "evidenceClasses": [
+            "STAT"
+          ],
+          "depth": 2,
+          "sensitivity": "precision_only",
+          "locators": [
+            {
+              "sourceId": "DONADI2021",
+              "manifestation": "arxiv_v1",
+              "locator": "manuscript pp. 14-15 = PDF pp. 14-15",
+              "supportScope": "the printed estimate and the printed decision not to use it"
+            }
+          ]
+        },
+        {
+          "id": "C3-N21",
+          "type": "reference_standard",
+          "proposition": "The Debye-Waller factor for germanium at liquid nitrogen temperature is taken as 0.20 square angstrom from reference 45; the relation between it and the mean square displacement is taken from references 43 and 44.",
+          "status": "source_asserted",
+          "evidenceClasses": [
+            "REC",
+            "CAL"
+          ],
+          "depth": 2,
+          "sensitivity": "verdict_capable",
+          "locators": [
+            {
+              "sourceId": "DONADI2021",
+              "manifestation": "arxiv_v1",
+              "locator": "manuscript p. 16 = PDF p. 16",
+              "supportScope": "the printed value and its bibliographic attribution"
+            }
+          ]
+        },
+        {
+          "id": "C3-N22",
+          "type": "auxiliary_assumption",
+          "proposition": "The relation used yields the ONE-DIMENSIONAL mean square displacement. A three-dimensional reading would give 0.087 rather than 0.050 times ten to the minus ten metres. The article does not state which convention its identification of R0 requires.",
+          "status": "reproduced",
+          "evidenceClasses": [
+            "FORM"
+          ],
+          "depth": 3,
+          "sensitivity": "precision_only",
+          "locators": [
+            {
+              "sourceId": "OPUS-P4-R3",
+              "manifestation": "reproduction",
+              "locator": "donadi2021_bound_and_sensitivity/result.txt",
+              "supportScope": "both conventions evaluated; the printed value matches the one-dimensional one"
+            }
+          ]
+        },
+        {
+          "id": "C3-N23",
+          "type": "interpretation",
+          "proposition": "SCALE OF THE MARGIN. At the identified prediction the model would produce about 1.4 times ten to the fifth counts in the region of interest against 576 measured, an over-prediction by a factor of about 245. The exclusion is therefore not a marginal one.",
+          "status": "reproduced",
+          "evidenceClasses": [
+            "STAT",
+            "FORM"
+          ],
+          "depth": 2,
+          "sensitivity": "verdict_capable",
+          "locators": [
+            {
+              "sourceId": "OPUS-P4-R3",
+              "manifestation": "reproduction",
+              "locator": "donadi2021_bound_and_sensitivity/result.txt",
+              "supportScope": "the predicted count and the over-prediction factor, from printed inputs"
+            }
+          ]
+        },
+        {
+          "id": "C3-N24",
+          "type": "interpretation",
+          "proposition": "SCOPE. What is excluded is one specific construction: non-dissipative dynamics, coherent nuclear emission, and the Penrose identification of the cut-off. The article itself names the free-cut-off and dissipative variants as surviving, and the exclusion says nothing about other collapse model families.",
+          "status": "verified_primary",
+          "evidenceClasses": [
+            "INT"
+          ],
+          "depth": 2,
+          "sensitivity": "interpretation_only",
+          "locators": [
+            {
+              "sourceId": "DONADI2021",
+              "manifestation": "arxiv_v1",
+              "locator": "manuscript pp. 6-7 and 16-17 = PDF pp. 6-7 and 16-17",
+              "supportScope": "the printed dissipation caveat and the printed alternatives paragraph"
+            }
+          ]
+        },
+        {
+          "id": "C3-N25",
+          "type": "publication_record",
+          "proposition": "The held manifestation is the arXiv version 1 author manuscript of 66 pages. The Nature Physics version of record is a distinct manifestation and has not been collated.",
+          "status": "verified_record",
+          "evidenceClasses": [
+            "REC"
+          ],
+          "depth": 1,
+          "sensitivity": "unknown",
+          "locators": [
+            {
+              "sourceId": "DONADI2021",
+              "manifestation": "arxiv_v1",
+              "locator": "manuscript pp. 1-2 = PDF pp. 1-2",
+              "supportScope": "identity of the held file, per the inherited final card"
+            }
+          ]
+        },
+        {
+          "id": "C3-F01",
+          "type": "unresolved_frontier",
+          "proposition": "The event-level spectrum is not published; only histograms appear. No independent re-binning, re-selection or line-fit is possible.",
+          "status": "inaccessible",
+          "evidenceClasses": [
+            "OBS"
+          ],
+          "depth": 2,
+          "sensitivity": "verdict_capable",
+          "locators": []
+        },
+        {
+          "id": "C3-F02",
+          "type": "unresolved_frontier",
+          "proposition": "The Monte Carlo deck is not published: no geometry file, physics list, GEANT4 version, or random-seed record. The efficiency curves appear only as a figure and their polynomial coefficients are not tabulated.",
+          "status": "inaccessible",
+          "evidenceClasses": [
+            "CAL"
+          ],
+          "depth": 2,
+          "sensitivity": "verdict_capable",
+          "locators": []
+        },
+        {
+          "id": "C3-F03",
+          "type": "unresolved_frontier",
+          "proposition": "The measured residual radionuclide activities per component, which are the inputs to the background simulation, are not tabulated in the held manifestation.",
+          "status": "inaccessible",
+          "evidenceClasses": [
+            "CAL",
+            "OBS"
+          ],
+          "depth": 2,
+          "sensitivity": "verdict_capable",
+          "locators": []
+        },
+        {
+          "id": "C3-F04",
+          "type": "unresolved_frontier",
+          "proposition": "No systematic uncertainty on the simulated background is stated or propagated, and the 70-count excess has no published alternative-hypothesis fit. The reproduction shows a 10 per cent background systematic would move the bound from 0.549 to 0.483 times ten to the minus ten metres.",
+          "status": "unresolved",
+          "evidenceClasses": [
+            "STAT"
+          ],
+          "depth": 2,
+          "sensitivity": "precision_only",
+          "locators": [
+            {
+              "sourceId": "OPUS-P4-R3",
+              "manifestation": "reproduction",
+              "locator": "donadi2021_bound_and_sensitivity/result.txt",
+              "supportScope": "the quantified effect of an assumed background systematic"
+            }
+          ]
+        },
+        {
+          "id": "C3-F05",
+          "type": "unresolved_frontier",
+          "proposition": "Reference 45, the source of the germanium Debye-Waller factor, is not held. The number that makes the model parameter-free is imported.",
+          "status": "inaccessible",
+          "evidenceClasses": [
+            "REC",
+            "CAL"
+          ],
+          "depth": 3,
+          "sensitivity": "verdict_capable",
+          "locators": []
+        },
+        {
+          "id": "C3-F06",
+          "type": "unresolved_frontier",
+          "proposition": "The version of record has not been collated against the held author manuscript; whether the printed counts, the aggregate constant or the bound differ between manifestations is unknown.",
+          "status": "unresolved",
+          "evidenceClasses": [
+            "REC"
+          ],
+          "depth": 1,
+          "sensitivity": "unknown",
+          "locators": []
+        },
+        {
+          "id": "C3-F07",
+          "type": "unresolved_frontier",
+          "proposition": "The derivation of eq. (4) from the collapse master equation was not re-derived by any participant; the emission rate is used at its printed form.",
+          "status": "depth_limited",
+          "evidenceClasses": [
+            "FORM"
+          ],
+          "depth": 2,
+          "sensitivity": "verdict_capable",
+          "locators": []
+        },
+        {
+          "id": "C3-F08",
+          "type": "unresolved_frontier",
+          "proposition": "Dead-layer thickness, active-volume determination and the pulse-shape cut efficiency are asserted rather than validated; no validation data are published in the held manifestation.",
+          "status": "inaccessible",
+          "evidenceClasses": [
+            "CAL"
+          ],
+          "depth": 2,
+          "sensitivity": "precision_only",
+          "locators": []
+        }
+      ],
+      "edges": [
+        {
+          "id": "C3-E01",
+          "source": "C3-N01",
+          "target": "C3-ROOT",
+          "type": "measured_by",
+          "statement": "The only measurement entering the root claim is the count in the region of interest over the stated exposure.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C3-E02",
+          "source": "C3-N03",
+          "target": "C3-ROOT",
+          "type": "inferred_from",
+          "statement": "The claimed range is the output of the posterior construction; changing the inference changes the range.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C3-E03",
+          "source": "C3-N05",
+          "target": "C3-ROOT",
+          "type": "classified_as",
+          "statement": "The word 'parameter-free' in the root claim is exactly the identification of the model cut-off with a crystallographic displacement; without it there is no parameter-free model to exclude.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C3-E04",
+          "source": "C3-N04",
+          "target": "C3-ROOT",
+          "type": "modeled_by",
+          "statement": "What is excluded is a rate prediction; the exclusion inherits every assumption of the rate derivation.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C3-E05",
+          "source": "C3-N06",
+          "target": "C3-ROOT",
+          "type": "inferred_from",
+          "statement": "The exclusion verdict is the comparison of the bound with the identified prediction, plus a decision about which variants count as the model.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C3-E06",
+          "source": "C3-N07",
+          "target": "C3-ROOT",
+          "type": "derived_from",
+          "statement": "The bound is read off a single aggregate constant; an error in that constant moves the bound as its cube root.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C3-E07",
+          "source": "C3-N02",
+          "target": "C3-ROOT",
+          "type": "corrected_by",
+          "statement": "The claim is about counts in excess of a simulated background, so the simulated background is a premise of the claim.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C3-E08",
+          "source": "C3-N25",
+          "target": "C3-ROOT",
+          "type": "documented_by",
+          "statement": "Every locator above belongs to one specific manifestation; the claim is asserted of that manifestation only.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C3-E09",
+          "source": "C3-N15",
+          "target": "C3-N01",
+          "type": "measured_by",
+          "statement": "The counts come from this particular crystal and this particular shielded configuration.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C3-E10",
+          "source": "C3-N16",
+          "target": "C3-N01",
+          "type": "conditioned_on",
+          "statement": "The spectrum contains only events that survived the digital pulse-shape filter, so the count is a post-selection count.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C3-E11",
+          "source": "C3-N17",
+          "target": "C3-N01",
+          "type": "calibrated_by",
+          "statement": "Assigning counts to the 1000-3800 keV window requires the energy scale, which is exhibited through in-spectrum radionuclide lines.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C3-E12",
+          "source": "C3-N12",
+          "target": "C3-N01",
+          "type": "conditioned_on",
+          "statement": "The count is a count within a region of interest whose boundaries were chosen partly by where the background model works.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C3-E13",
+          "source": "C3-N13",
+          "target": "C3-N02",
+          "type": "modeled_by",
+          "statement": "The simulated background is the output of the GEANT4 chain and inherits its inputs and its physics assumptions.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C3-E14",
+          "source": "C3-N11",
+          "target": "C3-N02",
+          "type": "compared_to",
+          "statement": "The relation between the measured and simulated counts is a 70-count excess, not agreement, and this is what the limit is built on top of.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C3-E15",
+          "source": "C3-N01",
+          "target": "C3-N03",
+          "type": "derived_from",
+          "statement": "The posterior is a posterior on the expected value of the measured count.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C3-E16",
+          "source": "C3-N02",
+          "target": "C3-N03",
+          "type": "conditioned_on",
+          "statement": "The bound is obtained by subtracting the background from the posterior upper limit, so the background enters as a fixed number.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C3-E17",
+          "source": "C3-N08",
+          "target": "C3-N03",
+          "type": "assumes",
+          "statement": "The unexplained additive offset of two counts enters the subtraction directly.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C3-E18",
+          "source": "C3-N09",
+          "target": "C3-N03",
+          "type": "assumes",
+          "statement": "Treating the background as exact rather than uncertain narrows the posterior and tightens the bound.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C3-E19",
+          "source": "C3-N10",
+          "target": "C3-N03",
+          "type": "assumes",
+          "statement": "The prior is declared and shown to be numerically inert, so the reported credible interval is effectively the flat-prior one.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C3-E20",
+          "source": "C3-N07",
+          "target": "C3-N03",
+          "type": "derived_from",
+          "statement": "The posterior limit on counts is converted into a limit on the cut-off through the aggregate constant.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C3-E21",
+          "source": "C3-N20",
+          "target": "C3-N03",
+          "type": "assumes",
+          "statement": "An available strengthening factor was deliberately not applied, so the reported bound is conservative in this respect.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C3-E22",
+          "source": "C3-N04",
+          "target": "C3-N07",
+          "type": "modeled_by",
+          "statement": "The aggregate constant is the rate formula integrated over the region of interest and the exposure.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C3-E23",
+          "source": "C3-N14",
+          "target": "C3-N07",
+          "type": "calibrated_by",
+          "statement": "The integral is weighted by simulated per-component detection efficiencies, which enter the constant linearly.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C3-E24",
+          "source": "C3-N19",
+          "target": "C3-N07",
+          "type": "conditioned_on",
+          "statement": "The constant sums contributions from every material, so it depends on a component inventory that is not published.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C3-E25",
+          "source": "C3-N18",
+          "target": "C3-N04",
+          "type": "assumes",
+          "statement": "The atomic-number-squared factor in the rate is a coherence assumption about how the collapse noise couples to nucleons, not a measured property.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C3-E26",
+          "source": "C3-N21",
+          "target": "C3-N05",
+          "type": "cites",
+          "statement": "The numerical value that makes the model parameter-free is imported from an unheld crystallographic source; this is logical dependence, not decoration.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C3-E27",
+          "source": "C3-N22",
+          "target": "C3-N05",
+          "type": "assumes",
+          "statement": "Which mean square displacement is meant changes the predicted cut-off by a factor of the square root of three.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C3-E28",
+          "source": "C3-N23",
+          "target": "C3-N06",
+          "type": "derived_from",
+          "statement": "The exclusion verdict is quantitatively supported by the size of the over-prediction, not merely by the ordering of two numbers.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C3-E29",
+          "source": "C3-N24",
+          "target": "C3-N06",
+          "type": "conditioned_on",
+          "statement": "The exclusion is scoped to one construction of the model, as the article itself states.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C3-E30",
+          "source": "C3-N05",
+          "target": "C3-N23",
+          "type": "derived_from",
+          "statement": "The over-prediction factor is computed at the identified cut-off, so it inherits the identification.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C3-E31",
+          "source": "C3-F01",
+          "target": "C3-N01",
+          "type": "documented_by",
+          "statement": "No event-level record is available; the observational branch stops.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C3-E32",
+          "source": "C3-F02",
+          "target": "C3-N13",
+          "type": "documented_by",
+          "statement": "The simulation cannot be rerun or audited; the branch stops at an exact documentation gap.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C3-E33",
+          "source": "C3-F02",
+          "target": "C3-N14",
+          "type": "documented_by",
+          "statement": "The efficiency functions are published only as a figure; the branch stops.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C3-E34",
+          "source": "C3-F03",
+          "target": "C3-N13",
+          "type": "documented_by",
+          "statement": "The simulation inputs are not tabulated; the branch stops.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C3-E35",
+          "source": "C3-F04",
+          "target": "C3-N09",
+          "type": "conditioned_on",
+          "statement": "The exactness assumption on the background is untested because no systematic is stated; the branch stops with its effect quantified.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C3-E36",
+          "source": "C3-F05",
+          "target": "C3-N21",
+          "type": "documented_by",
+          "statement": "The Debye-Waller source is not held; the branch stops at an acquisition gap.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C3-E37",
+          "source": "C3-F06",
+          "target": "C3-N25",
+          "type": "documented_by",
+          "statement": "The version of record is not collated; the manifestation branch stops.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C3-E38",
+          "source": "C3-F07",
+          "target": "C3-N04",
+          "type": "documented_by",
+          "statement": "The rate derivation was not reproduced; the branch stops at the depth boundary.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C3-E39",
+          "source": "C3-F08",
+          "target": "C3-N15",
+          "type": "documented_by",
+          "statement": "Dead layer and active volume are asserted; the branch stops.",
+          "reviewStatus": "passed"
+        },
+        {
+          "id": "C3-E40",
+          "source": "C3-F08",
+          "target": "C3-N16",
+          "type": "documented_by",
+          "statement": "The pulse-shape cut efficiency is asserted; the branch stops.",
+          "reviewStatus": "passed"
+        }
+      ],
+      "frontierSummary": {
+        "count": 8,
+        "verdict_capable_frontiers": [
+          "C3-F01",
+          "C3-F02",
+          "C3-F03",
+          "C3-F05",
+          "C3-F07"
+        ],
+        "precision_only_frontiers": [
+          "C3-F04",
+          "C3-F08"
+        ],
+        "interpretation_only_frontiers": [],
+        "unknown_frontiers": [
+          "C3-F06"
+        ],
+        "acquisition_gaps": [
+          "Nature Physics 17, 74-78 (2021) version of record",
+          "reference 45, the germanium Debye-Waller factor",
+          "references 43 and 44, the mean-square-displacement relation",
+          "reference 50, Boswell et al. (2011), the MaGe simulation framework"
+        ]
+      },
+      "sensitivitySummary": {
+        "verdict_capable": [
+          {
+            "node_id": "C3-N05",
+            "mechanism": "The identification of the model cut-off with a nuclear displacement is what converts a one-parameter model into a parameter-free one. Reject the identification and there is a bound but nothing excluded."
+          },
+          {
+            "node_id": "C3-N21",
+            "mechanism": "The imported Debye-Waller factor sets the predicted value; the bound is compared against it and against nothing else."
+          },
+          {
+            "node_id": "C3-N18",
+            "mechanism": "Dropping coherent nuclear emission reduces the predicted rate by the atomic number, weakening the bound by the cube root of 32, a factor 3.2."
+          },
+          {
+            "node_id": "C3-N07",
+            "mechanism": "The aggregate constant enters as a cube root; an order-of-magnitude error moves the bound by a factor 2.15. The independent order check bounds this."
+          },
+          {
+            "node_id": "C3-N02",
+            "mechanism": "The background is subtracted from the posterior limit, so a background error propagates one-for-one into the allowed signal."
+          },
+          {
+            "node_id": "C3-N12",
+            "mechanism": "A region of interest chosen partly by where the background model agrees is a selection on the analysis, and a different window would give a different limit."
+          },
+          {
+            "node_id": "C3-N09",
+            "mechanism": "Treating a simulated quantity as exact is the single strongest statistical assumption in the chain."
+          },
+          {
+            "node_id": "C3-N14",
+            "mechanism": "Efficiencies enter the aggregate constant linearly and are published only as a figure."
+          },
+          {
+            "node_id": "C3-N23",
+            "mechanism": "The 245-fold over-prediction is what makes the exclusion robust; if it were a factor of two the whole chain would be marginal."
+          }
+        ],
+        "precision_only": [
+          {
+            "node_id": "C3-N08",
+            "mechanism": "The additive offset of two counts moves the bound by about one part in a thousand."
+          },
+          {
+            "node_id": "C3-N10",
+            "mechanism": "The prior truncation is numerically inert."
+          },
+          {
+            "node_id": "C3-N11",
+            "mechanism": "The excess weakens the bound but cannot manufacture it, because the limit is one-sided."
+          },
+          {
+            "node_id": "C3-N20",
+            "mechanism": "The unapplied Compton improvement factor of 1.62 would strengthen the bound by about 17 per cent in the cut-off."
+          },
+          {
+            "node_id": "C3-N22",
+            "mechanism": "The dimensional convention changes the predicted cut-off by a factor 1.73, which is small against a margin of about 11."
+          },
+          {
+            "node_id": "C3-N15",
+            "mechanism": "Geometry uncertainties act through the efficiencies, at the per-cent level."
+          },
+          {
+            "node_id": "C3-N16",
+            "mechanism": "A filter better than 99 per cent efficient changes the count by under one per cent."
+          },
+          {
+            "node_id": "C3-N17",
+            "mechanism": "Energy-scale error moves counts across the window boundaries only marginally at 1 keV binning."
+          },
+          {
+            "node_id": "C3-F04",
+            "mechanism": "A 10 per cent background systematic moves the bound from 0.549 to 0.483, which does not approach the prediction."
+          }
+        ],
+        "interpretation_only": [
+          {
+            "node_id": "C3-N06",
+            "mechanism": "Whether to call this an exclusion of 'the' model depends on which variants are counted as the model."
+          },
+          {
+            "node_id": "C3-N24",
+            "mechanism": "Scope only: dissipative and free-cut-off variants are untouched, as the article says."
+          }
+        ],
+        "unknown": [
+          {
+            "node_id": "C3-N25",
+            "mechanism": "Version-of-record differences could in principle touch any printed number; none is known."
+          },
+          {
+            "node_id": "C3-F06",
+            "mechanism": "Same, stated as an explicit manifestation frontier."
+          }
+        ]
+      },
+      "survival": "Vary the three unreproduced assumptions adversarially and simultaneously - incoherent rather than coherent nuclear emission, the three-dimensional rather than one-dimensional reading of the displacement, and a 10 per cent unpropagated background systematic - and the bound falls to 0.152 while the prediction rises to 0.087 times ten to the minus ten metres. The exclusion survives with a margin of 1.74 in the cut-off, equivalently 5.3 in emission rate. At the article's own values the margin is a factor 245 in rate. What this means for the root claim: the EXCLUSION half is unusually robust for a chain this unreproducible, because the predicted signal exceeds the entire measured count in the region of interest by more than two orders of magnitude, so no plausible error in efficiency, background, or exposure can rescue the identified model. What does NOT survive is the unqualified phrase \"the parameter-free Diosi-Penrose model\" if it is read as a claim about a model family: the article excludes one construction, names two surviving variants itself, and the identification at C3-N05 is an interpretive import from an unheld crystallographic source rather than a measurement made here."
+    }
+  ],
+  "sharedDependencies": [
+    {
+      "canonical_dependency_id": "SD-RK-OBSERVATION-SET",
+      "dependent_root_ids": [
+        "P4-C1-RUBENS-KURLBAUM-MEASUREMENT"
+      ],
+      "correlation_mechanism": "The 1901 Annalen paper says part of its observation material had already appeared in the 1900 Berlin Academy paper. Counting the two manifestations as independent measurements duplicates experimental input.",
+      "correlation_scope": "within P4-C1 and inherited corpus routes",
+      "double_counting_risk": "high",
+      "evidence_status": "verified_primary",
+      "node_refs": [
+        "P4-C1-RUBENS-KURLBAUM-MEASUREMENT::C1-N28"
+      ]
+    },
+    {
+      "canonical_dependency_id": "SD-AUDIT-MANIFESTATION-PIPELINE",
+      "dependent_root_ids": [
+        "P4-C1-RUBENS-KURLBAUM-MEASUREMENT",
+        "P4-C2-GRANGIER-SINGLE-PHOTON",
+        "P4-C3-DONADI-DP-EXCLUSION"
+      ],
+      "correlation_mechanism": "Each root currently relies on one held PDF manifestation and local text/table extraction. A manifestation or extraction defect can correlate audit conclusions, but cannot correlate the underlying experiments.",
+      "correlation_scope": "audit process only; not a shared scientific dependency",
+      "double_counting_risk": "low",
+      "evidence_status": "source_asserted",
+      "node_refs": [
+        "C1-F07",
+        "C2-F08",
+        "C3-N25",
+        "C3-F06"
+      ]
+    },
+    {
+      "canonical_dependency_id": "SD-XROOT-SCIENTIFIC-BOUNDED-NULL",
+      "dependent_root_ids": [
+        "P4-C1-RUBENS-KURLBAUM-MEASUREMENT",
+        "P4-C2-GRANGIER-SINGLE-PHOTON",
+        "P4-C3-DONADI-DP-EXCLUSION"
+      ],
+      "correlation_mechanism": "No calibration artifact, material table, constant, software, background model, or inference pipeline is shared across two roots within the frozen two-edge graphs.",
+      "correlation_scope": "bounded two-edge pilot; depth-3 exceptions included",
+      "double_counting_risk": "none identified within scope",
+      "evidence_status": "bounded_null_with_recorded_exposure",
+      "exposure_note": "Sol disclosed this null before Opus froze. It is concordant, but Opus receives no independent-discovery credit for it."
+    }
+  ]
+}

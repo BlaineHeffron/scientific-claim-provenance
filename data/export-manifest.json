@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "datasetId": "CLAIM_PROVENANCE_ATLAS_PHASE4_V1",
+  "sourceGraphSha256": "79aa24b57ddd260a23ab61427b1957f64f2a3774019e8bf947bb71ededea6612",
+  "claimsJsonSha256": "49eb589cddc81e31e5f414f4bb4a59fd1bea4e4449739f2fd313a98b5e64b08b",
+  "forbiddenPatternScan": "PASS",
+  "pdfPayloads": 0,
+  "localPaths": 0
+}
