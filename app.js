@@ -68,7 +68,7 @@ function renderMetrics() {
     ["Claims", state.data.counts.claims],
     ["Dependency nodes", state.data.counts.nodes],
     ["Explicit frontiers", state.data.counts.frontiers],
-    ["Reviewed edges", state.data.counts.reverseReviewedEdges],
+    ["Reverse-reviewed edges", state.data.counts.reverseReviewedEdges],
   ];
   const container = $("#hero-metrics");
   container.replaceChildren();
